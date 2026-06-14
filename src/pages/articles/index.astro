@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const articles: CollectionEntry<'articles'>[] = await getCollection('articles');
+
+const sortedArticles = articles.sort(
+  (a: CollectionEntry<'articles'>, b: CollectionEntry<'articles'>) =>
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<BaseLayout title="All Articles" description="AI, finance and fintech reporting from Aveliq.">
+  <section class="articles">
+    <header class="articles-hero">
+      <div class="articles-eyebrow">All Articles</div>
+      <h1 class="articles-h1">The Full Feed</h1>
+      <p class="articles-desc">AI, technology, markets and future-focused reporting.</p>
+    </header>
+
+    <ul class="article-list">
+      {sortedArticles.map((article: CollectionEntry<'articles'>, i: number) => (
+        <li class="article-card">
+          <a href={`/articles/${article.id}/`}>
+            <div class="article-card-n">{String(i + 1).padStart(2, '0')}</div>
+            <div class="article-card-body">
+              <div class="article-card-meta">
+                <span class="article-card-cat">{article.data.category.toUpperCase()}</span>
+                <time datetime={article.data.date}>{article.data.date}</time>
+              </div>
+              <h2>{article.data.title}</h2>
+              {article.data.description && (
+                <p>{article.data.description}</p>
+              )}
+              <div class="article-card-foot">
+                <span>{article.data.author}</span>
+                <span>{article.data.readTime} min read</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+.articles {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 32px 80px;
+}
+
+.articles-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+
+.articles-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: .95;
+  letter-spacing: .02em;
+  color: var(--paper);
+  margin-bottom: 12px;
+}
+
+.articles-desc {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: rgba(245,240,232,.45);
+  margin-bottom: 40px;
+}
+
+.article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-card {
+  border-bottom: 1px solid var(--b);
+  transition: background .18s;
+}
+
+.article-card:hover {
+  background: var(--dim2);
+}
+
+.article-card a {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.article-card-n {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--amber);
+  padding-top: 4px;
+  min-width: 28px;
+  flex-shrink: 0;
+}
+
+.article-card-body { flex: 1; }
+
+.article-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.article-card-cat {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .1em;
+  background: var(--amber);
+  color: var(--ink);
+  padding: 2px 7px;
+}
+
+.article-card-meta time {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: rgba(245,240,232,.3);
+}
+
+.article-card-body h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: .02em;
+  color: var(--paper);
+  margin: 0 0 8px;
+  transition: color .18s;
+}
+
+.article-card:hover h2 {
+  color: var(--amber);
+}
+
+.article-card-body p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(245,240,232,.4);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.article-card-foot {
+  display: flex;
+  gap: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: rgba(245,240,232,.25);
+}
+
+@media (max-width: 768px) {
+  .articles { padding: 32px 18px 60px; }
+}
+</style>

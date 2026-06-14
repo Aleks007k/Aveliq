@@ -1,0 +1,42 @@
+---
+/**
+ * TickerBar.astro
+ *
+ * Drop-in replacement for the hardcoded ticker in BaseLayout.astro.
+ * Matches the EXISTING markup and CSS classes:
+ *   .ticker > .ticker-label + .ticker-scroll > .ticker-track > .ticker-item
+ *
+ * Reads src/data/ticker.json at BUILD TIME (zero client JS).
+ * Renders items twice for the seamless -50% scroll loop.
+ *
+ * Place at: src/components/TickerBar.astro
+ * In BaseLayout.astro:
+ *   import TickerBar from '../components/TickerBar.astro';
+ *   <TickerBar />
+ */
+
+import tickerData from '../data/ticker.json';
+
+const items = tickerData.items ?? [];
+---
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-label">SIGNALS</div>
+  <div class="ticker-scroll">
+    <div class="ticker-track">
+      {/* Copy A */}
+      {items.map((item) => (
+        <span class="ticker-item">
+          <b>{item.label}</b> <span class={item.dir}>{item.change}</span> {item.price}
+        </span>
+      ))}
+      {/* Copy A again — seamless loop */}
+      {items.map((item) => (
+        <span class="ticker-item">
+          <b>{item.label}</b> <span class={item.dir}>{item.change}</span> {item.price}
+        </span>
+      ))}
+    </div>
+  </div>
+</div>

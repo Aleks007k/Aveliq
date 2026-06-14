@@ -1,0 +1,138 @@
+{
+  "updated": "2026-06-14T09:06:43.240737+00:00",
+  "items": [
+    {
+      "symbol": "BTC",
+      "label": "BTC",
+      "price": "$64,437",
+      "change": "+1.0%",
+      "dir": "up"
+    },
+    {
+      "symbol": "ETH",
+      "label": "ETH",
+      "price": "$1,675",
+      "change": "+0.1%",
+      "dir": "up"
+    },
+    {
+      "symbol": "SOL",
+      "label": "SOL",
+      "price": "$68.19",
+      "change": "+1.2%",
+      "dir": "up"
+    },
+    {
+      "symbol": "BNB",
+      "label": "BNB",
+      "price": "$610.48",
+      "change": "+1.1%",
+      "dir": "up"
+    },
+    {
+      "symbol": "XRP",
+      "label": "XRP",
+      "price": "$1.14",
+      "change": "+0.1%",
+      "dir": "up"
+    },
+    {
+      "symbol": "ADA",
+      "label": "ADA",
+      "price": "$0.1708",
+      "change": "-1.2%",
+      "dir": "dn"
+    },
+    {
+      "symbol": "AVAX",
+      "label": "AVAX",
+      "price": "$6.65",
+      "change": "-0.1%",
+      "dir": "dn"
+    },
+    {
+      "symbol": "DOGE",
+      "label": "DOGE",
+      "price": "$0.0871",
+      "change": "-0.1%",
+      "dir": "dn"
+    },
+    {
+      "symbol": "NVDA",
+      "label": "NVDA",
+      "price": "$205.19",
+      "change": "+0.2%",
+      "dir": "up"
+    },
+    {
+      "symbol": "AAPL",
+      "label": "AAPL",
+      "price": "$291.13",
+      "change": "-1.5%",
+      "dir": "dn"
+    },
+    {
+      "symbol": "MSFT",
+      "label": "MSFT",
+      "price": "$390.74",
+      "change": "+0.1%",
+      "dir": "up"
+    },
+    {
+      "symbol": "GOOGL",
+      "label": "GOOGL",
+      "price": "$359.68",
+      "change": "+0.5%",
+      "dir": "up"
+    },
+    {
+      "symbol": "META",
+      "label": "META",
+      "price": "$566.98",
+      "change": "-0.3%",
+      "dir": "dn"
+    },
+    {
+      "symbol": "SPY",
+      "label": "S&P 500",
+      "price": "$741.75",
+      "change": "+0.5%",
+      "dir": "up"
+    },
+    {
+      "symbol": "QQQ",
+      "label": "NASDAQ",
+      "price": "$721.34",
+      "change": "+0.6%",
+      "dir": "up"
+    },
+    {
+      "symbol": "DIA",
+      "label": "DOW",
+      "price": "$513.06",
+      "change": "+0.7%",
+      "dir": "up"
+    },
+    {
+      "symbol": "GLD",
+      "label": "GOLD",
+      "price": "$386.54",
+      "change": "+0.1%",
+      "dir": "up"
+    },
+    {
+      "symbol": "USO",
+      "label": "OIL",
+      "price": "$125.43",
+      "change": "-2.6%",
+      "dir": "dn"
+    },
+    {
+      "symbol": "TLT",
+      "label": "10Y",
+      "price": "$85.77",
+      "change": "-0.2%",
+      "dir": "dn"
+    }
+  ]
+}

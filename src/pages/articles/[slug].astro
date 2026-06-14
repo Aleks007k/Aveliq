@@ -1,0 +1,383 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article: CollectionEntry<'articles'>) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+}
+
+const { article } = Astro.props as Props;
+const { title, description, category, type, author, date, readTime, tags } = article.data;
+
+const typeLabel: Record<string, string> = {
+  analysis: 'Analysis',
+  news: 'News',
+  'deep-dive': 'Deep Dive'
+};
+
+const catLabel: Record<string, string> = {
+  ai: 'AI',
+  finance: 'Finance',
+  crypto: 'Crypto',
+  business: 'Business',
+  fintech: 'Fintech'
+};
+
+const dateFormatted = new Date(date).toLocaleDateString('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric'
+});
+
+const { seoTitle, updated, image, imageAlt, keywords } = article.data;
+const related = await getCollection('articles');
+const relatedArticles = related
+  .filter((a: CollectionEntry<'articles'>) => 
+    a.id !== article.id && a.data.category === category
+  )
+  .slice(0, 3);
+const siteUrl = 'https://aveliq.com';
+const articleUrl = `${siteUrl}/articles/${article.id}/`;
+const ogImage = `${siteUrl}/og/${article.id}.png`;
+const publishedISO = new Date(date).toISOString();
+const updatedISO = updated ? new Date(updated).toISOString() : publishedISO;
+
+// JSON-LD Schema
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": title,
+  "description": description,
+  "image": [ogImage],
+  "datePublished": publishedISO,
+  "dateModified": updatedISO,
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "url": `${siteUrl}/authors/alex-reeve/`
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Aveliq",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/favicon.svg`
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": articleUrl
+  },
+  "keywords": (keywords ?? tags).join(", ")
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": catLabel[category] ?? category, "item": `${siteUrl}/category/${category}/` },
+    { "@type": "ListItem", "position": 3, "name": title, "item": articleUrl }
+  ]
+};
+
+const Content = (await import(`../../content/articles/${article.id}.md`)).default;
+---
+
+<BaseLayout
+  title={seoTitle ?? title}
+  description={description}
+  ogImage={ogImage}
+  ogType="article"
+  canonical={articleUrl}
+  schema={schema}
+  breadcrumbSchema={breadcrumbSchema}
+>
+
+<article class="article-page">
+
+  <div class="art-hero">
+    <div class="art-hero-inner">
+
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href={`/category/${category}`}>{catLabel[category] ?? category}</a>
+        <span>/</span>
+        <span>{title.substring(0, 40)}…</span>
+      </div>
+
+      <div class="art-meta-top">
+        <span class="art-cat-tag">{catLabel[category] ?? category}</span>
+        <span class="art-type-tag">{typeLabel[type] ?? type}</span>
+      </div>
+
+      <h1 class="art-h1">{title}</h1>
+      <p class="art-lead">{description}</p>
+
+      <div class="art-byline">
+        <div class="art-byline-left">
+          <div class="art-av">
+            {author.split(' ').map((w: string) => w[0]).join('')}
+          </div>
+          <a href="/authors/alex-reeve/" class="art-author-link">
+            <div class="art-author-name">{author}</div>
+            <div class="art-author-role">Editor, Aveliq</div>
+          </a>
+        </div>
+        <div class="art-byline-right">
+          <span class="art-meta-item">{dateFormatted}</span>
+          <span class="art-meta-item">{readTime} min read</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="art-layout">
+    <div class="art-body">
+      <div class="prose">
+        <Content />
+      </div>
+
+      <div class="art-tags">
+        {tags.map((tag: string) => (
+          <span class="art-tag">#{tag}</span>
+        ))}
+      </div>
+
+      <div class="art-share">
+        <span class="share-label">Share</span>
+        <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href)">
+          Copy link
+        </button>
+        <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent('https://aveliq.com/articles/' + article.id)}`} target="_blank" class="share-btn">
+          𝕏 Post
+        </a>
+      </div>
+
+      {relatedArticles.length > 0 && (
+        <div class="related">
+          <div class="related-label">Related Articles</div>
+          <div class="related-grid">
+            {relatedArticles.map((a: CollectionEntry<'articles'>) => (
+              <a href={`/articles/${a.id}/`} class="related-card">
+                <div class="related-cat">{catLabel[a.data.category] ?? a.data.category}</div>
+                <div class="related-h">{a.data.title}</div>
+                <div class="related-meta">{a.data.readTime} min read</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+    </div>
+  </div>
+
+</article>
+
+</BaseLayout>
+
+<style>
+.art-hero {
+  border-bottom: 1px solid var(--b);
+  background: var(--bg2);
+  padding: 48px 0 0;
+}
+.art-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px 40px;
+}
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: rgba(245,240,232,.35);
+  margin-bottom: 24px;
+}
+.breadcrumb a { color: rgba(245,240,232,.35); transition: color .18s; }
+.breadcrumb a:hover { color: var(--amber); }
+.breadcrumb span { opacity: .4; }
+.art-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.art-cat-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: var(--amber);
+  color: var(--ink);
+  padding: 3px 8px;
+}
+.art-type-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.4);
+  border: 1px solid var(--b);
+  padding: 3px 8px;
+}
+.art-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: .95;
+  letter-spacing: .02em;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+.art-lead {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(245,240,232,.6);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  border-left: 2px solid var(--amber);
+  padding-left: 16px;
+}
+.art-byline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-top: 1px solid var(--b);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.art-byline-left { display: flex; align-items: center; gap: 12px; }
+.art-av {
+  width: 36px; height: 36px;
+  background: var(--amber); color: var(--ink);
+  display: grid; place-items: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; font-weight: 700;
+}
+.art-author-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px; font-weight: 700; color: var(--paper);
+}
+.art-author-role {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; color: rgba(245,240,232,.35); letter-spacing: .06em;
+}
+.art-byline-right { display: flex; align-items: center; gap: 16px; }
+.art-meta-item {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; color: rgba(245,240,232,.35); letter-spacing: .06em;
+}
+.art-layout { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+.art-body { padding: 48px 0 80px; }
+
+.prose :global(h2) {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px; letter-spacing: .02em; color: var(--paper);
+  margin: 44px 0 16px; padding-top: 44px; border-top: 1px solid var(--b);
+}
+.prose :global(h2:first-of-type) { margin-top: 0; padding-top: 0; border-top: none; }
+.prose :global(h3) {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--amber); margin: 28px 0 12px;
+}
+.prose :global(p) {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 17px; color: rgba(245,240,232,.75);
+  line-height: 1.85; margin-bottom: 24px; max-width: 65ch;
+}
+.prose :global(strong) { color: var(--paper); font-weight: 700; }
+.prose :global(blockquote) {
+  border-left: 2px solid var(--amber);
+  margin: 36px 0; padding: 4px 0 4px 24px;
+}
+.prose :global(blockquote p) { font-size: 20px; font-style: italic; color: rgba(245,240,232,.8); }
+.prose :global(a) { color: var(--amber); border-bottom: 1px solid rgba(212,168,83,.3); transition: border-color .18s; }
+.prose :global(a:hover) { border-color: var(--amber); }
+
+.art-tags {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 40px 0; padding-top: 32px; border-top: 1px solid var(--b);
+}
+.art-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(245,240,232,.4); border: 1px solid var(--b);
+  padding: 5px 12px; transition: color .18s, border-color .18s; cursor: pointer;
+}
+.art-tag:hover { color: var(--amber); border-color: var(--amber); }
+
+.art-share {
+  display: flex; align-items: center; gap: 12px;
+  padding: 20px 0; border-top: 1px solid var(--b);
+}
+.share-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(245,240,232,.3);
+}
+.share-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 7px 14px; border: 1px solid var(--b);
+  background: transparent; color: rgba(245,240,232,.4);
+  cursor: pointer; transition: all .2s;
+  text-decoration: none; display: inline-flex;
+}
+.share-btn:hover { color: var(--amber); border-color: var(--amber); }
+
+.related {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--b);
+}
+.related-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 20px;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.related-card {
+  padding: 20px; border: 1px solid var(--b);
+  transition: border-color .2s; text-decoration: none; display: block;
+}
+.related-card:hover { border-color: var(--amber); }
+.related-cat {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 8px;
+}
+.related-h {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px; letter-spacing: .02em; color: var(--paper);
+  line-height: 1.1; margin-bottom: 10px; transition: color .2s;
+}
+.related-card:hover .related-h { color: var(--amber); }
+.related-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; color: rgba(245,240,232,.25);
+}
+
+@media (max-width: 768px) {
+  .art-hero-inner, .art-layout { padding: 0 18px; }
+  .art-h1 { font-size: 36px; }
+  .art-byline { flex-direction: column; }
+  .related-grid { grid-template-columns: 1fr; }
+}
+</style>

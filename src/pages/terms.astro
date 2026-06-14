@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Terms of Use" description="Aveliq terms of use and editorial policies.">
+  <section class="simple-page">
+    <div class="simple-hero">
+      <div class="simple-eyebrow">Legal</div>
+      <h1 class="simple-h1">Terms of Use.</h1>
+    </div>
+    <div class="simple-body">
+
+      <div class="policy-block">
+        <h2>Content</h2>
+        <p>All content published on Aveliq is for informational purposes only. Nothing on this site constitutes financial, legal, or investment advice. Always consult a qualified professional before making financial decisions.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Intellectual Property</h2>
+        <p>All articles, graphics, and other content on Aveliq are the property of Aveliq unless otherwise stated. Content may not be reproduced without written permission.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>External Links</h2>
+        <p>Aveliq may link to external websites. We are not responsible for the content or privacy practices of those sites.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Disclaimer</h2>
+        <p>Aveliq makes every effort to ensure accuracy but cannot guarantee that all information is current or complete. We reserve the right to update or remove content at any time.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Contact</h2>
+        <p>For terms-related enquiries contact <a href="mailto:hello@aveliq.com">hello@aveliq.com</a></p>
+        <p style="margin-top:16px;font-size:12px;opacity:.4">Last updated: June 2026</p>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.simple-hero {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--b);
+  padding: 60px 40px 48px;
+}
+.simple-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.simple-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: .95;
+  letter-spacing: .02em;
+  color: var(--paper);
+}
+.simple-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+.policy-block {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--b);
+}
+.policy-block h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: .02em;
+  color: var(--paper);
+  margin-bottom: 14px;
+}
+.policy-block p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  color: rgba(245,240,232,.6);
+  line-height: 1.8;
+}
+.policy-block a {
+  color: var(--amber);
+  border-bottom: 1px solid rgba(212,168,83,.3);
+}
+@media (max-width: 768px) {
+  .simple-hero { padding: 40px 20px 32px; }
+  .simple-body { padding: 32px 20px 60px; }
+}
+</style>

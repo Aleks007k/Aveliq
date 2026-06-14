@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const allArticles = await getCollection('articles');
+const articles = allArticles.sort(
+  (a: CollectionEntry<'articles'>, b: CollectionEntry<'articles'>) =>
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+
+const featured = articles.find((a: CollectionEntry<'articles'>) => a.data.featured) ?? articles[0];
+const topStories = articles.filter((a: CollectionEntry<'articles'>) => a.id !== featured?.id).slice(0, 3);
+const latest = articles.filter((a: CollectionEntry<'articles'>) => a.id !== featured?.id).slice(0, 4);
+const heroLatest = articles.filter((a: CollectionEntry<'articles'>) => a.id !== featured?.id).slice(0, 5);
+
+const catLabel: Record<string, string> = {
+  ai: 'AI', finance: 'Finance', crypto: 'Crypto',
+  business: 'Business', fintech: 'Fintech'
+};
+---
+
+<BaseLayout title="Signal over noise" description="Intelligence on AI, finance and fintech — without the noise.">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div>
+      <div class="hero-eyebrow">Intelligence for the informed</div>
+      <h1 class="hero-h1">Signal<br>over<br><em>noise.</em></h1>
+      <p class="hero-dek">Tracking the forces that move markets, reshape industries, and define tomorrow. AI, finance, fintech — without the noise.</p>
+    </div>
+  </div>
+
+  <div class="hero-anim" id="heroAnim">
+    <div class="hero-grid-wrap"><div class="hero-grid-drift" id="heroGrid"></div></div>
+    <div class="hero-follow" id="heroFollow">
+      <div class="hero-ring"></div>
+      <div class="hero-ring"></div>
+      <div class="hero-ring"></div>
+      <div class="hero-ring"></div>
+      <div class="hero-ring"></div>
+      <div class="hero-dot"></div>
+    </div>
+  </div>
+
+  {featured && (
+    <a href={`/articles/${featured.id}/`} class="featured">
+      <div class="featured-num">01</div>
+      <div class="featured-tag">★ Featured · {featured.data.type}</div>
+      <h2 class="featured-h">{featured.data.title}</h2>
+      <p class="featured-dek">{featured.data.description}</p>
+      <div class="featured-meta">
+        <span>{featured.data.author} · {featured.data.date} · {featured.data.readTime} min</span>
+        <span>READ →</span>
+      </div>
+    </a>
+  )}
+</div>
+
+<!-- TOP STORIES -->
+<div class="sec-label">
+  <div class="sec-label-text">TOP STORIES</div>
+  <div class="sec-label-line"></div>
+  <a href="/articles/" class="sec-label-link">ALL STORIES →</a>
+</div>
+
+<div class="grid">
+  {topStories.map((article: CollectionEntry<'articles'>, i: number) => (
+    <a href={`/articles/${article.id}/`} class="card" data-cat={article.data.category}>
+      <div class="card-n">{String(i + 1).padStart(2, '0')}</div>
+      <div class="card-tag">{catLabel[article.data.category] ?? article.data.category} · {article.data.type}</div>
+      <h3 class="card-h">{article.data.title}</h3>
+      <p class="card-dek">{article.data.description}</p>
+      <div class="card-foot">
+        <span>{article.data.date}</span>
+        <span>{article.data.readTime} min read</span>
+      </div>
+    </a>
+  ))}
+</div>
+
+<!-- LATEST -->
+<div class="sec-label">
+  <div class="sec-label-text">LATEST</div>
+  <div class="sec-label-line"></div>
+  <a href="/articles/" class="sec-label-link">FULL FEED →</a>
+</div>
+
+<div class="latest">
+  {latest.map((article: CollectionEntry<'articles'>, i: number) => (
+    <a href={`/articles/${article.id}/`} class="latest-row">
+      <span class="latest-n">{String(i + 1).padStart(2, '0')}</span>
+      <span class="latest-tag">{catLabel[article.data.category]?.toUpperCase() ?? article.data.category}</span>
+      <span class="latest-h">{article.data.title}</span>
+      <span class="latest-meta">{article.data.readTime} min</span>
+    </a>
+  ))}
+</div>
+
+  <!-- NEWSLETTER CTA -->
+  <div class="home-cta">
+    <div class="home-cta-inner">
+      <div class="home-cta-left">
+        <div class="home-cta-eyebrow">The Briefing</div>
+        <h2 class="home-cta-h">Get the signal,<br>skip the noise.</h2>
+        <p class="home-cta-dek">Weekly analysis on AI, finance and fintech. Read by operators, investors, and the curious.</p>
+      </div>
+      <form class="home-cta-form" onsubmit="handleHomeSub(event)">
+        <input type="email" id="home-email" placeholder="your@email.com" required />
+        <button type="submit">Subscribe →</button>
+        <div class="home-cta-meta">Free · Weekly · Unsubscribe anytime</div>
+      </form>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<script is:inline>
+function handleHomeSub(e) {
+  e.preventDefault();
+  const input = document.getElementById('home-email');
+  const btn = e.target.querySelector('button');
+  if (!input.value.includes('@')) {
+    input.style.borderColor = '#c9362a';
+    return;
+  }
+  input.style.borderColor = '#3a7d44';
+  btn.textContent = '✓ You\'re in';
+  btn.style.background = '#3a7d44';
+  btn.style.color = '#fff';
+  btn.style.pointerEvents = 'none';
+  input.disabled = true;
+}
+</script>
+
+<script is:inline>
+(function(){
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  const follow = document.getElementById('heroFollow');
+  const grid = document.getElementById('heroGrid');
+  const R = 320;
+  let r = hero.getBoundingClientRect();
+  let tx = r.width * 0.62, ty = r.height * 0.5, x = tx, y = ty;
+  hero.addEventListener('pointermove', function(e){
+    r = hero.getBoundingClientRect();
+    tx = e.clientX - r.left;
+    ty = e.clientY - r.top;
+  });
+  hero.addEventListener('pointerleave', function(){
+    r = hero.getBoundingClientRect();
+    tx = r.width * 0.62; ty = r.height * 0.5;
+  });
+  function loop(){
+    x += (tx - x) * 0.035;
+    y += (ty - y) * 0.035;
+    if (follow) follow.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    if (grid) {
+      const m = 'radial-gradient(circle ' + R + 'px at ' + x + 'px ' + y + 'px, #000 0%, #000 34%, transparent 100%)';
+      grid.style.webkitMaskImage = m;
+      grid.style.maskImage = m;
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+</script>

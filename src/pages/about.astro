@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About" description="Aveliq covers AI, finance and fintech. Signal over noise.">
+  <section class="about">
+
+    <div class="about-hero">
+      <div class="about-eyebrow">About</div>
+      <h1 class="about-h1">Signal<br>over noise.</h1>
+    </div>
+
+    <div class="about-body">
+
+      <div class="about-block">
+        <div class="about-block-label">Mission</div>
+        <div class="about-block-content">
+          <p>Aveliq covers artificial intelligence, technology, markets, and the ideas shaping the future. Our mission is to filter noise, identify important signals, and deliver clear analysis for curious readers.</p>
+          <p>We write for investors, operators, and technologists who need context, not headlines.</p>
+        </div>
+      </div>
+
+      <div class="about-block">
+        <div class="about-block-label">Editorial Standards</div>
+        <div class="about-block-content">
+          <p>We prioritize accuracy, transparency, and context. Every story is reviewed for clarity and factual consistency. We separate reporting from opinion and update articles when new information becomes available.</p>
+          <p>We do not accept payment for editorial coverage. Sponsored content is always clearly labelled.</p>
+        </div>
+      </div>
+
+      <div class="about-block">
+        <div class="about-block-label">Author</div>
+        <div class="about-block-content">
+          <div class="author-card">
+            <div class="author-av">AR</div>
+            <div>
+              <div class="author-name">Alex Reeve</div>
+              <div class="author-role">Editor · Aveliq</div>
+            </div>
+          </div>
+          <p>Alex Reeve is an independent writer and editor focused on emerging technologies, AI, and digital finance. His work explores how technology influences business, markets, and everyday life.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.about-hero {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--b);
+  padding: 60px 40px 48px;
+}
+
+.about-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+
+.about-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: .95;
+  letter-spacing: .02em;
+  color: var(--paper);
+}
+
+.about-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px 80px;
+}
+
+.about-block {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--b);
+}
+
+.about-block-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  padding-top: 4px;
+}
+
+.about-block-content p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  color: rgba(245,240,232,.7);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-block-content p:last-child {
+  margin-bottom: 0;
+}
+
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: var(--bg2);
+  border: 1px solid var(--b);
+}
+
+.author-av {
+  width: 44px;
+  height: 44px;
+  background: var(--amber);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 4px;
+}
+
+.author-role {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: rgba(245,240,232,.35);
+  letter-spacing: .06em;
+}
+
+@media (max-width: 768px) {
+  .about-hero { padding: 40px 20px 32px; }
+  .about-body { padding: 0 20px 60px; }
+  .about-block { grid-template-columns: 1fr; gap: 16px; }
+}
+</style>

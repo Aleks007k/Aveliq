@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact" description="Get in touch with Aveliq editorial team.">
+  <section class="simple-page">
+    <div class="simple-hero">
+      <div class="simple-eyebrow">Contact</div>
+      <h1 class="simple-h1">Get in touch.</h1>
+    </div>
+    <div class="simple-body">
+      <div class="contact-block">
+        <div class="contact-label">Editorial</div>
+        <div class="contact-value">For story tips, corrections, or editorial inquiries.</div>
+        <a href="mailto:editorial@aveliq.com" class="contact-link">editorial@aveliq.com</a>
+      </div>
+      <div class="contact-block">
+        <div class="contact-label">Sponsorship</div>
+        <div class="contact-value">For sponsored content, advertising, and partnership opportunities.</div>
+        <a href="mailto:partnerships@aveliq.com" class="contact-link">partnerships@aveliq.com</a>
+      </div>
+      <div class="contact-block">
+        <div class="contact-label">General</div>
+        <div class="contact-value">For everything else.</div>
+        <a href="mailto:hello@aveliq.com" class="contact-link">hello@aveliq.com</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.simple-hero {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--b);
+  padding: 60px 40px 48px;
+}
+.simple-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.simple-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: .95;
+  letter-spacing: .02em;
+  color: var(--paper);
+}
+.simple-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+.contact-block {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--b);
+}
+.contact-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+.contact-value {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: rgba(245,240,232,.45);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.contact-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--amber);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212,168,83,.3);
+  transition: border-color .2s;
+}
+.contact-link:hover { border-color: var(--amber); }
+@media (max-width: 768px) {
+  .simple-hero { padding: 40px 20px 32px; }
+  .simple-body { padding: 32px 20px 60px; }
+}
+</style>

@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy" description="Aveliq privacy policy and data practices.">
+  <section class="simple-page">
+    <div class="simple-hero">
+      <div class="simple-eyebrow">Legal</div>
+      <h1 class="simple-h1">Privacy Policy.</h1>
+    </div>
+    <div class="simple-body">
+
+      <div class="policy-block">
+        <h2>Data We Collect</h2>
+        <p>Aveliq collects minimal data necessary to operate the publication. This includes email addresses submitted voluntarily for newsletter subscription, and anonymised analytics data to understand readership patterns.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>How We Use Your Data</h2>
+        <p>Email addresses are used solely to deliver the Aveliq newsletter. We do not sell, rent, or share personal data with third parties for marketing purposes.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Cookies</h2>
+        <p>Aveliq uses essential cookies for site functionality and anonymised analytics cookies to measure readership. No advertising cookies are used without consent.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Your Rights</h2>
+        <p>You may request deletion of your data at any time by contacting us at <a href="mailto:hello@aveliq.com">hello@aveliq.com</a>. Newsletter subscribers may unsubscribe at any time via the link in any email.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Contact</h2>
+        <p>For privacy-related enquiries contact <a href="mailto:hello@aveliq.com">hello@aveliq.com</a></p>
+        <p style="margin-top:16px;font-size:12px;opacity:.4">Last updated: June 2026</p>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.simple-hero {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--b);
+  padding: 60px 40px 48px;
+}
+.simple-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.simple-h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: .95;
+  letter-spacing: .02em;
+  color: var(--paper);
+}
+.simple-body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+.policy-block {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--b);
+}
+.policy-block h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: .02em;
+  color: var(--paper);
+  margin-bottom: 14px;
+}
+.policy-block p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
+  color: rgba(245,240,232,.6);
+  line-height: 1.8;
+}
+.policy-block a {
+  color: var(--amber);
+  border-bottom: 1px solid rgba(212,168,83,.3);
+}
+@media (max-width: 768px) {
+  .simple-hero { padding: 40px 20px 32px; }
+  .simple-body { padding: 32px 20px 60px; }
+}
+</style>

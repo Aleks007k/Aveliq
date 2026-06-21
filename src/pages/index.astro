@@ -79,23 +79,23 @@ const catLabel: Record<string, string> = {
   ))}
 </div>
 
-<!-- LATEST -->
-<div class="sec-label">
-  <div class="sec-label-text">LATEST</div>
-  <div class="sec-label-line"></div>
-  <a href="/articles/" class="sec-label-link">FULL FEED →</a>
-</div>
+  <!-- LATEST -->
+  <div class="sec-label">
+    <div class="sec-label-text">LATEST</div>
+    <div class="sec-label-line"></div>
+    <a href="/articles/" class="sec-label-link">FULL FEED →</a>
+  </div>
 
-<div class="latest">
-  {latest.map((article: CollectionEntry<'articles'>, i: number) => (
-    <a href={`/articles/${article.id}/`} class="latest-row">
-      <span class="latest-n">{String(i + 1).padStart(2, '0')}</span>
-      <span class="latest-tag">{catLabel[article.data.category]?.toUpperCase() ?? article.data.category}</span>
-      <span class="latest-h">{article.data.title}</span>
-      <span class="latest-meta">{article.data.readTime} min</span>
-    </a>
-  ))}
-</div>
+  <div class="latest">
+    {latest.map((article: CollectionEntry<'articles'>, i: number) => (
+      <a href={`/articles/${article.id}/`} class="latest-row">
+        <span class="latest-n">{String(i + 1).padStart(2, '0')}</span>
+        <span class="latest-tag">{catLabel[article.data.category]?.toUpperCase() ?? article.data.category}</span>
+        <span class="latest-h">{article.data.title}</span>
+        <span class="latest-meta">{article.data.readTime} min</span>
+      </a>
+    ))}
+  </div>
 
   <!-- NEWSLETTER CTA -->
   <div class="home-cta">
@@ -105,33 +105,14 @@ const catLabel: Record<string, string> = {
         <h2 class="home-cta-h">Get the signal,<br>skip the noise.</h2>
         <p class="home-cta-dek">Weekly analysis on AI, finance and fintech. Read by operators, investors, and the curious.</p>
       </div>
-      <form class="home-cta-form" onsubmit="handleHomeSub(event)">
-        <input type="email" id="home-email" placeholder="your@email.com" required />
-        <button type="submit">Subscribe →</button>
-        <div class="home-cta-meta">Free · Weekly · Unsubscribe anytime</div>
-      </form>
+      <div class="home-cta-form">
+        <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="25cc5817-f9f1-4437-925c-a804396f94ce"></script>
+        <div class="home-cta-meta" style="margin-top:20px;">Free · Weekly · Unsubscribe anytime</div>
+      </div>
     </div>
   </div>
 
 </BaseLayout>
-
-<script is:inline>
-function handleHomeSub(e) {
-  e.preventDefault();
-  const input = document.getElementById('home-email');
-  const btn = e.target.querySelector('button');
-  if (!input.value.includes('@')) {
-    input.style.borderColor = '#c9362a';
-    return;
-  }
-  input.style.borderColor = '#3a7d44';
-  btn.textContent = '✓ You\'re in';
-  btn.style.background = '#3a7d44';
-  btn.style.color = '#fff';
-  btn.style.pointerEvents = 'none';
-  input.disabled = true;
-}
-</script>
 
 <script is:inline>
 (function(){
@@ -152,8 +133,8 @@ function handleHomeSub(e) {
     tx = r.width * 0.62; ty = r.height * 0.5;
   });
   function loop(){
-    x += (tx - x) * 0.035;
-    y += (ty - y) * 0.035;
+    x += (tx - x) * 0.0035;
+    y += (ty - y) * 0.0035;
     if (follow) follow.style.transform = 'translate(' + x + 'px,' + y + 'px)';
     if (grid) {
       const m = 'radial-gradient(circle ' + R + 'px at ' + x + 'px ' + y + 'px, #000 0%, #000 34%, transparent 100%)';

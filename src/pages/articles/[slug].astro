@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import Disclaimer from '../../components/Disclaimer.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -35,14 +36,23 @@ const dateFormatted = new Date(date).toLocaleDateString('en-US', {
   month: 'long', day: 'numeric', year: 'numeric'
 });
 
-const { seoTitle, updated, image, imageAlt, keywords } = article.data;
+const { seoTitle, updated, image, imageAlt, keywords, sources, affiliate } = article.data;
+
+const updatedFormatted = updated ? new Date(updated).toLocaleDateString('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric'
+}) : null;
+
+function safeHost(u: string): string {
+  try { return new URL(u).hostname.replace('www.', ''); } catch { return u; }
+}
+
 const related = await getCollection('articles');
 const relatedArticles = related
   .filter((a: CollectionEntry<'articles'>) => 
     a.id !== article.id && a.data.category === category
   )
   .slice(0, 3);
-const siteUrl = 'https://aveliq.com';
+const siteUrl = 'https://aveliq.net';
 const articleUrl = `${siteUrl}/articles/${article.id}/`;
 const ogImage = `${siteUrl}/og/${article.id}.png`;
 const publishedISO = new Date(date).toISOString();
@@ -133,6 +143,7 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
         </div>
         <div class="art-byline-right">
           <span class="art-meta-item">{dateFormatted}</span>
+          {updatedFormatted && <span class="art-meta-item art-updated">Updated {updatedFormatted}</span>}
           <span class="art-meta-item">{readTime} min read</span>
         </div>
       </div>
@@ -142,9 +153,25 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
 
   <div class="art-layout">
     <div class="art-body">
+      {affiliate && <Disclaimer type="affiliate" />}
+      {(category === 'finance' || category === 'crypto') && <Disclaimer type="financial" />}
       <div class="prose">
         <Content />
       </div>
+
+      <!-- AD SLOT (reserved — activate when traffic arrives) -->
+      <div class="ad-slot" aria-hidden="true"></div>
+
+      {sources && sources.length > 0 && (
+        <div class="art-sources">
+          <div class="art-sources-label">Sources</div>
+          <ol class="art-sources-list">
+            {sources.map((src: string) => (
+              <li><a href={src} target="_blank" rel="noopener nofollow">{safeHost(src)}</a></li>
+            ))}
+          </ol>
+        </div>
+      )}
 
       <div class="art-tags">
         {tags.map((tag: string) => (
@@ -157,7 +184,7 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
         <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href)">
           Copy link
         </button>
-        <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent('https://aveliq.com/articles/' + article.id)}`} target="_blank" class="share-btn">
+        <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent('https://aveliq.net/articles/' + article.id)}`} target="_blank" class="share-btn">
           𝕏 Post
         </a>
       </div>
@@ -373,6 +400,42 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
   font-family: 'Space Mono', monospace;
   font-size: 9px; color: rgba(245,240,232,.25);
 }
+
+.art-byline-right .art-updated { color: var(--amber); }
+
+.ad-slot { min-height: 0; margin: 0; }
+
+.art-sources {
+  margin: 40px 0;
+  padding-top: 28px;
+  border-top: 1px solid var(--b);
+}
+.art-sources-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 14px;
+}
+.art-sources-list {
+  list-style: none; counter-reset: src;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.art-sources-list li {
+  counter-increment: src;
+  display: flex; gap: 10px; align-items: baseline;
+}
+.art-sources-list li::before {
+  content: counter(src, decimal-leading-zero);
+  font-family: 'Space Mono', monospace;
+  color: var(--amber); font-size: 10px;
+}
+.art-sources-list a {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: rgba(245,240,232,.6);
+  border-bottom: 1px solid rgba(245,240,232,.15);
+  word-break: break-all; transition: color .18s, border-color .18s;
+}
+.art-sources-list a:hover { color: var(--amber); border-color: var(--amber); }
 
 @media (max-width: 768px) {
   .art-hero-inner, .art-layout { padding: 0 18px; }

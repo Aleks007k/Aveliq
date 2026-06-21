@@ -1,0 +1,16 @@
+# Aveliq
+
+> Signal over noise. Independent analysis on AI, finance, fintech, crypto, and business.
+
+Aveliq is an independent media publication covering the forces shaping technology and markets. Coverage focuses on clear, analytical explanation rather than hype — artificial intelligence, financial markets, digital assets, business strategy, and fintech.
+
+## Categories
+- [AI](https://aveliq.net/category/ai): Artificial intelligence, LLMs, and automation.
+- [Finance](https://aveliq.net/category/finance): Monetary policy, capital markets, and macro.
+- [Crypto](https://aveliq.net/category/crypto): Digital assets and institutional adoption.
+- [Business](https://aveliq.net/category/business): Corporate strategy, venture capital, and startups.
+- [Fintech](https://aveliq.net/category/fintech): Payments, banking-as-a-service, and embedded finance.
+
+## About
+- [About Aveliq](https://aveliq.net/about): Editorial approach and transparency.
+- [Newsletter](https://aveliq.net/newsletter): Weekly analysis on AI, finance, and fintech.

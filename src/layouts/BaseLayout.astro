@@ -1,8 +1,9 @@
 ---
 import '../styles.css';
 import TickerBar from '../components/TickerBar.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 const { title, description, ogImage, ogType, canonical, schema, breadcrumbSchema } = Astro.props;
-const siteUrl = 'https://aveliq.com';
+const siteUrl = 'https://aveliq.net';
 const finalOgImage = ogImage ?? `${siteUrl}/og-default.jpg`;
 const finalCanonical = canonical ?? Astro.url.href;
 ---
@@ -74,7 +75,6 @@ const finalCanonical = canonical ?? Astro.url.href;
 <slot />
 
 <!-- FOOTER -->
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -117,9 +117,12 @@ const finalCanonical = canonical ?? Astro.url.href;
     <span class="footer-bottom-links">
       <a href="/terms">Terms</a>
       <a href="/privacy">Privacy</a>
+      <a href="/affiliate-disclosure">Affiliate</a>
     </span>
   </div>
 </footer>
+
+<CookieBanner />
 
 </body>
 </html>

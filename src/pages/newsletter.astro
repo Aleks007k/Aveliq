@@ -10,16 +10,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h1 class="nl-h1">Get the<br>briefing.</h1>
       <p class="nl-sub">Weekly analysis of AI, technology, markets, and the signals that matter. No noise. No filler.</p>
 
-      <form class="nl-form" onsubmit="handleSub(event)">
-        <input
-          type="email"
-          id="nl-email"
-          placeholder="Enter your email"
-          aria-label="Email address"
-          required
-        />
-        <button type="submit">Subscribe →</button>
-      </form>
+      <div class="nl-form">
+        <script is:inline async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="25cc5817-f9f1-4437-925c-a804396f94ce"></script>
+      </div>
 
       <div class="nl-meta">Free · Weekly · No spam</div>
 
@@ -132,20 +125,3 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 }
 </style>
 
-<script>
-function handleSub(e: Event) {
-  e.preventDefault();
-  const input = document.getElementById('nl-email') as HTMLInputElement | null;
-  const btn = (e.target as HTMLFormElement).querySelector('button');
-  if (!input?.value.includes('@')) {
-    if (input) input.style.borderColor = '#c9362a';
-    return;
-  }
-  input.style.borderColor = '#3a7d44';
-  if (btn) {
-    btn.textContent = '✓ You\'re in';
-    btn.style.cssText = 'background:#3a7d44;color:#fff;pointer-events:none;padding:14px 22px;border:none;font-family:Space Mono,monospace;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;';
-  }
-  input.disabled = true;
-}
-</script>

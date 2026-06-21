@@ -1,0 +1,60 @@
+---
+interface Props {
+  type: 'affiliate' | 'financial';
+}
+const { type } = Astro.props;
+
+const content = {
+  affiliate: {
+    label: 'Affiliate Disclosure',
+    text: 'This article contains affiliate links. If you subscribe or purchase through them, Aveliq may earn a commission at no additional cost to you. Recommendations are based on real testing and verifiable data.',
+    link: { href: '/affiliate-disclosure', text: 'Learn more' }
+  },
+  financial: {
+    label: 'Not Financial Advice',
+    text: 'This article is for informational purposes only and does not constitute financial, investment, or legal advice. Aveliq is not a licensed financial advisor. Always do your own research before making financial decisions.',
+    link: null
+  }
+};
+
+const d = content[type];
+---
+
+<aside class={`disclaimer disclaimer-${type}`}>
+  <div class="disclaimer-label">{d.label}</div>
+  <p class="disclaimer-text">
+    {d.text}
+    {d.link && <a href={d.link.href}>{d.link.text} →</a>}
+  </p>
+</aside>
+
+<style>
+.disclaimer {
+  border-left: 2px solid var(--amber);
+  background: var(--bg2);
+  padding: 14px 18px;
+  margin: 28px 0;
+}
+.disclaimer-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.disclaimer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(245,240,232,.55);
+}
+.disclaimer-text a {
+  color: var(--amber);
+  border-bottom: 1px solid rgba(212,168,83,.3);
+  white-space: nowrap;
+}
+.disclaimer-financial {
+  border-left-color: rgba(245,240,232,.3);
+}
+</style>

@@ -2,37 +2,37 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Terms of Use" description="Aveliq terms of use and editorial policies.">
+<BaseLayout title="Affiliate Disclosure" description="How Aveliq uses affiliate links and maintains editorial independence.">
   <section class="simple-page">
     <div class="simple-hero">
       <div class="simple-eyebrow">Legal</div>
-      <h1 class="simple-h1">Terms of Use.</h1>
+      <h1 class="simple-h1">Affiliate Disclosure.</h1>
     </div>
     <div class="simple-body">
 
       <div class="policy-block">
-        <h2>Content</h2>
-        <p>All content published on Aveliq is for informational purposes only. Nothing on this site constitutes financial, legal, or investment advice. Always consult a qualified professional before making financial decisions.</p>
+        <h2>What Affiliate Links Are</h2>
+        <p>Some links on Aveliq are affiliate links. If you click one and subscribe to or purchase a product, Aveliq may earn a commission — at no additional cost to you. These commissions help fund our independent coverage.</p>
       </div>
 
       <div class="policy-block">
-        <h2>Intellectual Property</h2>
-        <p>All articles, graphics, and other content on Aveliq are the property of Aveliq unless otherwise stated. Content may not be reproduced without written permission.</p>
+        <h2>Editorial Independence</h2>
+        <p>Affiliate relationships never determine our coverage. Recommendations are based on real testing, documented features, and verifiable data — not on which programs pay the most. When a product is the best fit, we say so. When it isn't, we say that too.</p>
       </div>
 
       <div class="policy-block">
-        <h2>External Links</h2>
-        <p>Aveliq may link to external websites. We are not responsible for the content or privacy practices of those sites.</p>
+        <h2>Real Data Only</h2>
+        <p>Comparison tables and product details on Aveliq are built from real, sourced information — official pricing pages, documentation, and hands-on testing. We do not invent figures, fabricate statistics, or quote sources that do not exist.</p>
       </div>
 
       <div class="policy-block">
-        <h2>Disclaimer</h2>
-        <p>Aveliq makes every effort to ensure accuracy but cannot guarantee that all information is current or complete. We reserve the right to update or remove content at any time.</p>
+        <h2>How to Identify Affiliate Links</h2>
+        <p>Affiliate links carry the <code>rel="sponsored"</code> attribute and are marked where they appear. Any article containing affiliate links includes a clear disclosure at the top.</p>
       </div>
 
       <div class="policy-block">
         <h2>Contact</h2>
-        <p>For terms-related enquiries contact <a href="mailto:hello@aveliq.net">hello@aveliq.net</a></p>
+        <p>Questions about our affiliate practices? Contact <a href="mailto:hello@aveliq.net">hello@aveliq.net</a></p>
         <p style="margin-top:16px;font-size:12px;opacity:.4">Last updated: June 2026</p>
       </div>
 
@@ -86,6 +86,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .policy-block a {
   color: var(--amber);
   border-bottom: 1px solid rgba(212,168,83,.3);
+}
+.policy-block code {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  color: var(--amber);
+  background: var(--bg2);
+  padding: 2px 6px;
 }
 @media (max-width: 768px) {
   .simple-hero { padding: 40px 20px 32px; }

@@ -21,6 +21,7 @@ const articles = defineCollection({
     sources: z.array(z.string()).optional(),
     related: z.array(z.string()).optional(),
     draft: z.boolean().optional(),
+    affiliate: z.boolean().optional(),
   }),
 });
 

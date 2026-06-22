@@ -55,7 +55,7 @@ const finalCanonical = canonical ?? Astro.url.href;
        <line x1="22" y1="14" x2="22" y2="26" stroke="#d4a853" stroke-width="1.8"/>
        <line x1="23.5" y1="20" x2="27" y2="20" stroke="#d4a853" stroke-width="1.8"/>
      </svg>
-<div class="logo-name">AVELIQ</div>
+      <div class="logo-name">AVELIQ</div>
     </a>
   </div>
   <ul class="nav-links">
@@ -66,7 +66,31 @@ const finalCanonical = canonical ?? Astro.url.href;
     <a href="/category/fintech">Fintech</a>
   </ul>
   <div class="nav-right">Live</div>
+  <button class="nav-burger" id="navBurger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/category/ai">AI</a>
+  <a href="/category/finance">Finance</a>
+  <a href="/category/crypto">Crypto</a>
+  <a href="/category/business">Business</a>
+  <a href="/category/fintech">Fintech</a>
+  <a href="/articles/">All Stories</a>
+  <a href="/newsletter">Newsletter</a>
+</div>
+
+<script is:inline>
+  (function () {
+    var b = document.getElementById('navBurger');
+    var m = document.getElementById('mobileMenu');
+    if (b && m) b.addEventListener('click', function () {
+      m.classList.toggle('open');
+      b.classList.toggle('active');
+    });
+  })();
+</script>
 
 <!-- TICKER -->
 <TickerBar />
@@ -78,7 +102,7 @@ const finalCanonical = canonical ?? Astro.url.href;
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo">
+      <a href="/" class="footer-logo">
         <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
           <polygon points="20,3 37,20 20,37 3,20" fill="none" stroke="#d4a853" stroke-width="1.8"/>
           <line x1="13" y1="20" x2="16.5" y2="20" stroke="#d4a853" stroke-width="1.8"/>
@@ -88,7 +112,7 @@ const finalCanonical = canonical ?? Astro.url.href;
           <line x1="23.5" y1="20" x2="27" y2="20" stroke="#d4a853" stroke-width="1.8"/>
         </svg>
         <span class="logo-name">AVELIQ</span>
-      </div>
+      </a>
       <div class="footer-desc">Signal over noise. Intelligence on AI, finance and fintech.</div>
     </div>
     <div class="footer-links">

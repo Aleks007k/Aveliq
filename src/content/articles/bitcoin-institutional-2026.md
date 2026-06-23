@@ -10,7 +10,7 @@ readTime: 5
 featured: false
 tags: ["Bitcoin", "ETF", "Institutional", "Crypto"]
 keywords: ["bitcoin institutional adoption 2026", "bitcoin etf inflows"]
-draft: draft
+draft: true
 ---
 
 Forty billion dollars does not flow into a new asset class by accident.

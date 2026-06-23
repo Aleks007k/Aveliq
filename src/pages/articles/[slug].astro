@@ -16,8 +16,7 @@ interface Props {
 }
 
 const { article } = Astro.props as Props;
-const { title, description, category, type, author, date, readTime, tags } = article.data;
-
+const { title, description, category, type, author, date, readTime, tags, draft } = article.data;
 const typeLabel: Record<string, string> = {
   analysis: 'Analysis',
   news: 'News',
@@ -108,6 +107,7 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
   canonical={articleUrl}
   schema={schema}
   breadcrumbSchema={breadcrumbSchema}
+  noindex={draft === true}
 >
 
 <article class="article-page">

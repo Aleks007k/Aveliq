@@ -2,7 +2,7 @@
 import '../styles.css';
 import TickerBar from '../components/TickerBar.astro';
 import CookieBanner from '../components/CookieBanner.astro';
-const { title, description, ogImage, ogType, canonical, schema, breadcrumbSchema } = Astro.props;
+const { title, description, ogImage, ogType, canonical, schema, breadcrumbSchema, noindex } = Astro.props;
 const siteUrl = 'https://aveliq.net';
 const finalOgImage = ogImage ?? `${siteUrl}/og-default.jpg`;
 const finalCanonical = canonical ?? Astro.url.href;
@@ -17,6 +17,7 @@ const finalCanonical = canonical ?? Astro.url.href;
   <title>{title} — Aveliq</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={finalCanonical} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />

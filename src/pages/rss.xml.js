@@ -4,7 +4,9 @@ import { getCollection } from 'astro:content';
 export async function GET(context) {
   const articles = await getCollection('articles');
 
-  const sortedArticles = articles.sort(
+  const sortedArticles = articles
+    .filter((a) => a.data.draft !== true)
+    .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
   );
 

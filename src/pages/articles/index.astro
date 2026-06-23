@@ -4,7 +4,9 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 const articles: CollectionEntry<'articles'>[] = await getCollection('articles');
 
-const sortedArticles = articles.sort(
+const sortedArticles = articles
+  .filter((a: CollectionEntry<'articles'>) => a.data.draft !== true)
+  .sort(
   (a: CollectionEntry<'articles'>, b: CollectionEntry<'articles'>) =>
     new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );

@@ -3,7 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 const allArticles = await getCollection('articles');
-const articles = allArticles.sort(
+const articles = allArticles
+  .filter((a: CollectionEntry<'articles'>) => a.data.draft !== true)
+  .sort(
   (a: CollectionEntry<'articles'>, b: CollectionEntry<'articles'>) =>
     new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
 );

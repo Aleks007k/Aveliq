@@ -9,7 +9,7 @@ date: "2026-06-19"
 readTime: 4
 tags: ["ai image generator", "midjourney", "dall-e", "openai", "image generation", "comparison"]
 sources: ["https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans", "https://openai.com/api/pricing/"]
-draft: false
+draft: true
 ---
 
 Two tools dominate the AI image generation conversation. Choosing between them is less about quality benchmarks and more about how you work and what you're willing to pay for.

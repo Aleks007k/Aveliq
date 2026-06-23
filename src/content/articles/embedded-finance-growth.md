@@ -10,7 +10,7 @@ readTime: 7
 featured: false
 tags: ["Embedded Finance", "Fintech", "Banking", "Payments"]
 keywords: ["embedded finance 2026", "banking as a service growth"]
-draft: false
+draft: true
 ---
 
 The best bank account you have may not be from a bank.

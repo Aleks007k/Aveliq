@@ -10,7 +10,7 @@ readTime: 6
 featured: false
 tags: ["AI", "Venture Capital", "Startups", "Funding"]
 keywords: ["ai startup funding 2026", "ai venture capital correction"]
-draft: false
+draft: true
 ---
 
 Not every AI company is worth what it was eighteen months ago.

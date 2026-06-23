@@ -8,6 +8,7 @@ date: "2026-05-31"
 readTime: 6
 featured: true
 tags: ["LLM", "Capital Markets", "Trading", "Infrastructure"]
+draft: true
 ---
 
 Walk onto any major trading floor today and the visual experience is largely unchanged from a decade ago. Screens, terminals, humans making calls.

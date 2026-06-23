@@ -1283,7 +1283,6 @@ a.aff-btn:hover {
   letter-spacing: .1em;
   text-transform: uppercase;
   color: rgba(245,240,232,.3);
-  border: 1px solid var(--b);
   z-index: 0;
 }
 .bh-form iframe { position: relative; z-index: 1; }

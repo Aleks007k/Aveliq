@@ -142,7 +142,7 @@ a { color: inherit; text-decoration: none; }
 
 .ticker-track {
   display: flex;
-  animation: scroll-ticker 40s linear infinite;
+  animation: scroll-ticker 20s linear infinite;
   white-space: nowrap;
 }
 

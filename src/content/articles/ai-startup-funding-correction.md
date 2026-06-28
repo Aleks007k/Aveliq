@@ -17,11 +17,9 @@ Not every AI company is worth what it was eighteen months ago.
 
 That sentence would have been controversial in 2024. In mid-2026, it is becoming consensus — quietly, without the dramatic collapse that bears predicted, but unmistakably.
 
-## The numbers behind the shift
+## The shift in where money flows
 
-Global AI startup funding peaked at $112 billion in 2024. The first half of 2026 is tracking toward $67 billion annualised — still historically elevated, but down 40% from the peak.
-
-More telling than the headline number is where the money is going. Mega-rounds for foundation model companies have slowed sharply. The action has moved downstream — to vertical AI applications with demonstrable revenue, clear retention metrics, and a path to profitability that does not depend on another funding round.
+Global AI startup funding remains historically elevated, but the composition has changed sharply. Mega-rounds for foundation model companies have slowed. The action has moved downstream — to vertical AI applications with demonstrable revenue, clear retention metrics, and a path to profitability that does not depend on another funding round.
 
 Investors are asking a question they largely skipped in 2024: what does this company look like when the model costs approach zero?
 
@@ -48,3 +46,9 @@ Consumer AI is the graveyard. High acquisition costs, low retention, and a user 
 This is not 2001. The technology is real, the revenue is real, and the enterprise adoption is accelerating.
 
 But valuations priced in a winner-take-all dynamic that is not materialising. The correction is a repricing — of moats, of margins, and of what it actually means to build something defensible in a world where the underlying intelligence is becoming a commodity.
+
+---
+
+**Methodology.** This analysis reflects editorial judgment based on publicly available reporting as of June 2026. Specific funding figures cited elsewhere may differ by source and methodology. This is not financial advice.
+
+*This article may contain affiliate links. They do not affect our editorial assessment.*

@@ -10,7 +10,7 @@ readTime: 7
 featured: false
 tags: ["Embedded Finance", "Fintech", "Banking", "Payments"]
 keywords: ["embedded finance 2026", "banking as a service growth"]
-draft: true
+draft: false
 ---
 
 The best bank account you have may not be from a bank.
@@ -27,11 +27,11 @@ The result is that any company with distribution — a marketplace, a SaaS platf
 
 A payroll software company offering a business bank account to its users is not competing with JPMorgan. It is monetising a relationship it already has, with users who already trust it, at near-zero marginal acquisition cost.
 
-## The numbers are not small
+## The scale of the shift
 
-Embedded finance revenue globally crossed $90 billion in 2025. Projections for 2030 range from $250 billion to $380 billion depending on how aggressively you model insurance and investment products entering the stack.
+Payments led the first wave of embedded finance. Lending is leading the second. Insurance is the third wave that has not fully broken yet — but the infrastructure for embedded insurance is maturing rapidly.
 
-Payments led the first wave. Lending is leading the second. Insurance is the third wave that has not fully broken yet — but the infrastructure for embedded insurance is maturing rapidly.
+Across all three, the direction is the same: financial products moving from dedicated financial apps into the software people already use daily.
 
 ## What this means for traditional banks
 
@@ -58,3 +58,9 @@ Embedded finance is not a trend. It is a structural shift in how financial servi
 The companies that will win are not necessarily the best financial services companies. They are the companies with the best distribution, the deepest user relationships, and the willingness to use financial products as a retention tool rather than a profit centre.
 
 The bank branch is not dying. It is just moving inside your favourite app.
+
+---
+
+**Methodology.** This analysis reflects editorial judgment based on publicly available reporting as of June 2026. This is not financial advice.
+
+*This article may contain affiliate links. They do not affect our editorial assessment.*

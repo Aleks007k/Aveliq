@@ -17,6 +17,7 @@ interface Props {
 
 const { article } = Astro.props as Props;
 const { title, description, category, type, author, date, readTime, tags, draft } = article.data;
+const authorSlug = author.toLowerCase().trim().replace(/\s+/g, '-');
 const typeLabel: Record<string, string> = {
   analysis: 'Analysis',
   news: 'News',
@@ -69,7 +70,7 @@ const schema = {
   "author": {
     "@type": "Person",
     "name": author,
-    "url": `${siteUrl}/authors/alex-reeve/`
+    "url": `${siteUrl}/authors/${authorSlug}/`
   },
   "publisher": {
     "@type": "Organization",
@@ -136,7 +137,7 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
           <div class="art-av">
             {author.split(' ').map((w: string) => w[0]).join('')}
           </div>
-          <a href="/authors/alex-reeve/" class="art-author-link">
+          <a href={`/authors/${authorSlug}/`} class="art-author-link">
             <div class="art-author-name">{author}</div>
             <div class="art-author-role">Editor, Aveliq</div>
           </a>

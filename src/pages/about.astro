@@ -1,5 +1,36 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const authors = [
+  {
+    initials: 'AR',
+    name: 'Alex Reeve',
+    slug: 'alex-reeve',
+    focus: 'AI, business, and macro finance',
+    desc: 'Lead editorial voice. Covers AI, business, and markets, and writes Aveliq\u2019s commercial comparisons and reviews. Cold and concrete from the first line, skeptical of hype, and always takes a position grounded in revenue and unit economics rather than press-release language.'
+  },
+  {
+    initials: 'SC',
+    name: 'Sophia Chen',
+    slug: 'sophia-chen',
+    focus: 'Crypto and fintech',
+    desc: 'Covers cryptocurrencies, tokens, exchanges, DeFi, stablecoins, and fintech rails. Reads price action and on-chain data closely and writes for readers who already understand the market \u2014 specific figures, clear stance, no filler.'
+  },
+  {
+    initials: 'MH',
+    name: 'Marcus Hale',
+    slug: 'marcus-hale',
+    focus: 'Deep AI',
+    desc: 'Writes long-form deep dives into how AI works under the hood \u2014 models, research, and infrastructure. For readers who want the mechanics, not the surface.'
+  },
+  {
+    initials: 'HY',
+    name: 'Hanna Yovska',
+    slug: 'hanna-yovska',
+    focus: 'Finance',
+    desc: 'Covers personal, institutional, and macro finance with a human angle \u2014 what the numbers actually mean for an ordinary person or investor.'
+  }
+];
 ---
 
 <BaseLayout title="About" description="Aveliq covers AI, finance and fintech. Signal over noise.">
@@ -29,16 +60,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="about-block">
-        <div class="about-block-label">Author</div>
+        <div class="about-block-label">How We Work</div>
         <div class="about-block-content">
-          <div class="author-card">
-            <div class="author-av">AR</div>
-            <div>
-              <div class="author-name">Alex Reeve</div>
-              <div class="author-role">Editor · Aveliq</div>
+          <p>Aveliq is AI-assisted. We use AI tools to help research, draft, and structure our articles. Every piece is reviewed by a human before publication \u2014 figures are checked against primary sources, and nothing is published on autopilot.</p>
+          <p>Our authors are editorial voices, each with a defined focus and a consistent point of view. They are not presented as real individuals, and we do not invent personal histories or credentials for them.</p>
+        </div>
+      </div>
+
+      <div class="about-block">
+        <div class="about-block-label">Authors</div>
+        <div class="about-block-content">
+          {authors.map((a) => (
+            <div class="author-card">
+              <div class="author-av">{a.initials}</div>
+              <div>
+                <a href={`/authors/${a.slug}/`} class="author-name-link">
+                  <div class="author-name">{a.name}</div>
+                </a>
+                <div class="author-role">{a.focus}</div>
+              </div>
             </div>
-          </div>
-          <p>Alex Reeve is an independent writer and editor focused on emerging technologies, AI, and digital finance. His work explores how technology influences business, markets, and everyday life.</p>
+            <p>{a.desc}</p>
+          ))}
         </div>
       </div>
 
@@ -86,66 +129,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 .about-block-label {
   font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--amber);
-  padding-top: 4px;
-}
-
-.about-block-content p {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
-  color: rgba(245,240,232,.7);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.about-block-content p:last-child {
-  margin-bottom: 0;
-}
-
-.author-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background: var(--bg2);
-  border: 1px solid var(--b);
-}
-
-.author-av {
-  width: 44px;
-  height: 44px;
-  background: var(--amber);
-  color: var(--ink);
-  display: grid;
-  place-items: center;
-  font-family: 'Space Mono', monospace;
-  font-size: 13px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.author-name {
-  font-family: 'Space Mono', monospace;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--paper);
-  margin-bottom: 4px;
-}
-
-.author-role {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  color: rgba(245,240,232,.35);
-  letter-spacing: .06em;
-}
-
-@media (max-width: 768px) {
-  .about-hero { padding: 40px 20px 32px; }
-  .about-body { padding: 0 20px 60px; }
-  .about-block { grid-template-columns: 1fr; gap: 16px; }
-}
-</style>
+  font-size:

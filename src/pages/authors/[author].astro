@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+function slugify(name: string): string {
+  return name.toLowerCase().trim().replace(/\s+/g, '-');
+}
+
+const catLabel: Record<string, string> = {
+  ai: 'AI', finance: 'Finance', crypto: 'Crypto',
+  business: 'Business', fintech: 'Fintech'
+};
+
+const siteUrl = 'https://aveliq.net';
+
+export async function getStaticPaths() {
+  const slug = (name: string) => name.toLowerCase().trim().replace(/\s+/g, '-');
+  const all = await getCollection('articles');
+  const names = [...new Set(all.map((a: CollectionEntry<'articles'>) => a.data.author))];
+  return names.map((name: string) => ({
+    params: { author: slug(name) },
+    props: { authorName: name },
+  }));
+}
+
+interface Props { authorName: string; }
+const { authorName } = Astro.props as Props;
+
+const all = await getCollection('articles');
+const articles = all
+  .filter((a: CollectionEntry<'articles'>) => a.data.author === authorName && a.data.draft !== true)
+  .sort((a: CollectionEntry<'articles'>, b: CollectionEntry<'articles'>) =>
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+
+const initials = authorName.split(' ').map((w: string) => w[0]).join('').toUpperCase();
+const cats = [...new Set(articles.map((a: CollectionEntry<'articles'>) => a.data.category))];
+const catNames = cats.map((c: string) => catLabel[c] ?? c);
+
+function joinNice(arr: string[]): string {
+  if (arr.length === 0) return 'AI, finance, and fintech';
+  if (arr.length === 1) return arr[0];
+  if (arr.length === 2) return `${arr[0]} and ${arr[1]}`;
+  return `${arr.slice(0, -1).join(', ')}, and ${arr[arr.length - 1]}`;
+}
+
+const bio = `${authorName} is an editorial voice at Aveliq, covering ${joinNice(catNames)}.`;
+const authorUrl = `${siteUrl}/authors/${slugify(authorName)}/`;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": authorName,
+  "worksFor": { "@type": "Organization", "name": "Aveliq" },
+  "url": authorUrl,
+  "description": bio
+};
+---
+
+<BaseLayout
+  title={authorName}
+  description={bio}
+  canonical={authorUrl}
+  schema={personSchema}
+  noindex={articles.length === 0}
+>
+
+<div class="author-page">
+
+  <div class="author-hero">
+    <div class="author-hero-inner">
+      <div class="author-big-av">{initials}</div>
+      <div class="author-hero-text">
+        <div class="author-eyebrow">Author</div>
+        <h1 class="author-name-h1">{authorName}</h1>
+        <div class="author-title">Editorial voice · Aveliq</div>
+        <p class="author-bio">{bio}</p>
+        <a class="author-about-link" href="/about/">About our editorial approach →</a>
+        <div class="author-stats">
+          <div class="author-stat">
+            <span class="author-stat-n">{articles.length}</span>
+            <span class="author-stat-l">Articles</span>
+          </div>
+          <div class="author-stat">
+            <span class="author-stat-n">{cats.length}</span>
+            <span class="author-stat-l">Categories</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="author-articles">
+    <div class="author-articles-label">Latest by {authorName}</div>
+    {articles.length === 0 && (
+      <p class="author-empty">No published articles yet.</p>
+    )}
+    {articles.map((a: CollectionEntry<'articles'>, i: number) => (
+      <a href={`/articles/${a.id}/`} class="author-row">
+        <div class="author-row-n">{String(i + 1).padStart(2, '0')}</div>
+        <div class="author-row-body">
+          <div class="author-row-cat">{catLabel[a.data.category] ?? a.data.category}</div>
+          <h2 class="author-row-h">{a.data.title}</h2>
+          <div class="author-row-meta">
+            {new Date(a.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })} · {a.data.readTime} min read
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+</div>
+
+</BaseLayout>
+
+<style>
+.author-hero { background: var(--bg2); border-bottom: 1px solid var(--b); padding: 60px 0; }
+.author-hero-inner { max-width: 900px; margin: 0 auto; padding: 0 32px; display: flex; gap: 32px; align-items: flex-start; }
+.author-big-av { width: 88px; height: 88px; background: var(--amber); color: var(--ink); display: grid; place-items: center; font-family: 'Space Mono', monospace; font-size: 28px; font-weight: 700; flex-shrink: 0; }
+.author-eyebrow { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+.author-name-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(44px, 6vw, 72px); line-height: .95; letter-spacing: .02em; color: var(--paper); margin-bottom: 8px; }
+.author-title { font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: .08em; color: rgba(245,240,232,.4); margin-bottom: 20px; }
+.author-bio { font-family: 'Libre Baskerville', serif; font-size: 16px; color: rgba(245,240,232,.65); line-height: 1.8; max-width: 600px; margin-bottom: 12px; }
+.author-about-link { display: inline-block; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: .06em; color: var(--amber); border-bottom: 1px solid rgba(212,168,83,.3); margin-bottom: 24px; transition: border-color .18s; }
+.author-about-link:hover { border-color: var(--amber); }
+.author-stats { display: flex; gap: 32px; }
+.author-stat { display: flex; flex-direction: column; gap: 4px; }
+.author-stat-n { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--amber); line-height: 1; }
+.author-stat-l { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: rgba(245,240,232,.3); }
+.author-articles { max-width: 900px; margin: 0 auto; padding: 48px 32px 80px; }
+.author-articles-label { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); margin-bottom: 24px; }
+.author-empty { font-family: 'Libre Baskerville', serif; font-size: 15px; color: rgba(245,240,232,.4); }
+.author-row { display: flex; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--b); text-decoration: none; transition: background .18s; }
+.author-row:hover { background: var(--dim2); }
+.author-row-n { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--amber); padding-top: 4px; min-width: 28px; }
+.author-row-cat { font-family: 'Space Mono', monospace; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); margin-bottom: 6px; }
+.author-row-h { font-family: 'Bebas Neue', sans-serif; font-size: 24px; letter-spacing: .02em; color: var(--paper); margin-bottom: 6px; transition: color .18s; }
+.author-row:hover .author-row-h { color: var(--amber); }
+.author-row-meta { font-family: 'Space Mono', monospace; font-size: 9px; color: rgba(245,240,232,.3); }
+@media (max-width: 768px) {
+  .author-hero-inner { flex-direction: column; padding: 0 18px; gap: 20px; }
+  .author-articles { padding: 32px 18px 60px; }
+  .author-big-av { width: 64px; height: 64px; font-size: 22px; }
+}
+</style>

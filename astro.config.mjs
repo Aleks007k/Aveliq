@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 // Когда статья готова к индексации: убери её строку отсюда И поставь draft:false в файле.
 const draftSlugs = [
   'ai-startup-funding-correction',
-  'bitcoin-institutional-2026',
 ];
 
 export default defineConfig({

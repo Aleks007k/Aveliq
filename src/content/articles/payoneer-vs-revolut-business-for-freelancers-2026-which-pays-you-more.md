@@ -21,9 +21,9 @@ Picture this: a client in Germany just approved your invoice. The money moves, a
 </thead>
 <tbody>
 <tr><th>Entry plan</th><td>Standard Account</td><td>Basic</td></tr>
-<tr><th>Monthly price</th><td class="no">—</td><td>$10/month</td></tr>
+<tr><th>Monthly price</th><td>No monthly fee</td><td>$10/month</td></tr>
 <tr><th>Free tier</th><td class="yes">✓</td><td class="no">—</td></tr>
-<tr><th>Key limit</th><td class="no">—</td><td>$1,000</td></tr>
+<tr><th>Key limit</th><td>$29.95/yr if under $6,000/yr</td><td>$1,000</td></tr>
 </tbody>
 </table>
 </div></div>

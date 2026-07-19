@@ -46,7 +46,7 @@ The honest read: don't assume MailerLite is more expensive just because the data
 
 MailerLite is built for creators and lean operations. The free plan bundles campaigns, automations, landing pages, a website builder, digital product sales, and booking functionality into a single tool. For a solopreneur or a small team that wants one platform to cover marketing and a basic web presence, that's a compelling offer.
 
-The paid plans advertise unlimited monthly emails — removing the volume ceiling that constrains Brevo's lower tiers. MailerLite also lists integrations with Claude and ChatGPT among its 100+ connections, which points toward a workflows-first approach to AI rather than native content generation.
+The paid plans advertise unlimited monthly emails — removing the volume ceiling that constrains Brevo's lower tiers. MailerLite also lists integrations with Claude and ChatGPT among its 100+ connections, which points toward a workflows-first approach to AI rather than native content generation. If you want AI writing built into the tool itself rather than bolted on, that is a separate category of product — our [Jasper vs Copy.ai comparison](/articles/jasper-vs-copy-ai-2026-which-ai-creative-tool-is-worth-your-money/) covers what those platforms actually do differently.
 
 **Who it suits:** Creators, consultants, and small businesses that sell digital products or services and want their marketing stack consolidated.
 
@@ -65,6 +65,8 @@ The question isn't which platform is better. It's which model fits your list.
 **Choose MailerLite if** you're a creator or service business with a modest list, you want a website and digital storefront alongside your email tool, and you'd benefit from unlimited sends once you scale past free.
 
 **Choose Brevo if** you have a large contact base but variable send frequency, you want pricing transparency from the start, or your team runs segmentation-heavy campaigns that need A/B testing and behavioral scoring.
+
+Both platforms assume you are sending marketing campaigns to a list you already own. If your plan is to charge readers for the newsletter itself, the economics change completely — the [Beehiiv vs Substack comparison](/articles/beehiiv-vs-substack-2026-which-newsletter-platform-is-right-for-you/) breaks down how those two split revenue instead of charging a flat fee.
 
 One caveat worth sitting with: MailerLite's paid plan pricing isn't available in this data. Before committing, get a quote for your specific subscriber count. The free tier is generous enough to test the product first — 250 subscribers is a real number for an early-stage business, not a teaser.
 

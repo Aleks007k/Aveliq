@@ -36,11 +36,15 @@ Both are. Beehiiv's Launch plan costs $0, requires no credit card, and supports 
 
 The free tiers solve different problems. Beehiiv's cap at 2,500 subscribers means the free ride ends the moment you gain real traction. Substack lets you publish free indefinitely to any size list, which is a meaningful advantage for writers who are still building an audience and not yet charging for access.
 
+Both platforms are built around a newsletter you charge for. If your goal is sending marketing campaigns to an existing customer list instead, [MailerLite and Brevo](/articles/mailerlite-vs-brevo-for-small-businesses-2026-which-email-marketing-to/) price that work very differently.
+
 ## What does each platform actually cost at scale?
 
 Beehiiv's Scale plan runs $49 per month (or $517 billed annually) for up to 100,000 subscribers. The Max plan is $109 per month ($1,151 billed annually) for the same subscriber ceiling, adding features like removed beehiiv branding and higher AI credit limits — 50 per day versus 25 on Scale. An Enterprise tier exists for lists above 100,000 subscribers, billed on a flexible basis; beehiiv does not publish a fixed price for it.
 
 Substack does not charge a monthly fee at any scale. Instead, it takes 10% of each paid transaction, on top of Stripe's 2.9% plus $0.30 per transaction, and a 0.7% billing fee on recurring subscriptions. Those fees compound as revenue grows. A creator generating substantial subscription income hands over a fixed percentage regardless of list size.
+
+Platform fees are only half the story once money starts moving across borders. Where that revenue lands matters too — our comparison of [Payoneer and Revolut Business](/articles/payoneer-vs-revolut-business-for-freelancers-2026-which-pays-you-more/) covers what it costs to actually receive international payouts.
 
 ## Which platform has better monetization tools?
 

@@ -40,6 +40,8 @@ TeraWulf announced the Justified Data campus acquisition in February and told in
 
 The Maryland-based company is a useful case study in the broader pivot. Bitcoin mining revenue is volatile by design — it resets every halving, it tracks BTC price, and it competes with every other miner on the network. AI infrastructure revenue, structured as a long-term lease with a creditworthy counterparty, is the opposite of that. Fixed. Long-dated. Underwritable.
 
+That contrast is exactly why capital keeps flowing here while it tightens elsewhere in AI. As we argued in [The AI Funding Bubble Has a Leak](/articles/ai-startup-funding-correction/), investors are backing away from application-layer bets with thin moats and toward infrastructure with contracted revenue. A twenty-year lease is about as far from a speculative valuation as this sector gets.
+
 The question the market has not fully answered is whether every miner with a power asset can execute this conversion, or whether TeraWulf's outcome reflects specific site quality, management credibility, and timing that others cannot replicate.
 
 ## The Losers No One Is Talking About

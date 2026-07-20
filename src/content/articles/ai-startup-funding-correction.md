@@ -37,6 +37,8 @@ Everything else is a feature, not a company.
 
 Enterprise AI infrastructure is still attracting serious capital. The picks-and-shovels trade — GPUs, networking, cooling, power — remains crowded and expensive.
 
+Power is the sharpest example of that shift. [Anthropic's 20-year, roughly $19 billion lease with TeraWulf](/articles/anthropic-s-19b-lease-rewrites-ai-infrastructure-economics/) is contracted revenue against a physical asset — a very different instrument from an application-layer valuation resting on a growth assumption.
+
 Healthcare AI is seeing a second wave of investment, driven by FDA clearances that create defensible regulatory moats. Legal AI, similarly, benefits from a profession that is slow to change but enormous in aggregate spend.
 
 Consumer AI is the graveyard. High acquisition costs, low retention, and a user base that switches to whatever model is newest. Building a durable consumer AI business has proven harder than almost anyone expected.

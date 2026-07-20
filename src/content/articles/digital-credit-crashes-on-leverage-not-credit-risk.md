@@ -36,6 +36,8 @@ The episode did not happen in isolation. Combined crypto exchange volumes fell 3
 
 The one counter-trend: RWA perpetual futures volumes rose 10.4% in May, hitting a new all-time high. More leveraged exposure building in the real-world asset space, not less. Thursday was a warning about what that positioning can do when it unwinds fast.
 
+It also cuts against the tidier story about who owns crypto risk now. [Institutional adoption of Bitcoin](/articles/bitcoin-institutional-2026/) has changed the marginal buyer, but leveraged yield products still sit at the edge of that market — and they move first.
+
 The level to watch is par. If STRC and SATA stabilize and hold near $100 in the sessions ahead, the liquidation-not-credit narrative survives. If they drift lower on light volume, the question becomes whether Thursday flushed the weak hands or just the first wave of them.
 
 ---

@@ -33,6 +33,8 @@ Institutional ownership compresses some volatility at the margins. It does not e
 
 The correlation with risk assets during stress periods remains stubbornly high. That is the part the ETF marketing materials do not emphasise.
 
+Leverage is the other amplifier, and it sits outside the ETF wrapper entirely. The [digital credit selloff in June](/articles/digital-credit-crashes-on-leverage-not-credit-risk/) showed how quickly forced selling can detach price from fundamentals when leveraged holders get margin-called.
+
 ## The corporate treasury trade
 
 MicroStrategy normalised the corporate Bitcoin treasury. Since then, a growing number of public companies have followed with some allocation.
@@ -44,6 +46,8 @@ The risk is equally straightforward: if Bitcoin falls sharply — which it has d
 ## The bottom line
 
 Institutional adoption is the most significant structural shift in Bitcoin's history. It provides a demand floor that did not exist in previous cycles.
+
+The remaining variable is regulatory. Allocators sizing positions against an unfinished rulebook are pricing in uncertainty that legislation like the [CLARITY Act](/articles/clarity-act-trump-pushes-hard-before-august-recess/) is meant to remove.
 
 It does not make Bitcoin safe. It makes Bitcoin institutional — which is a different thing entirely.
 

@@ -30,6 +30,10 @@ Kalshi traders put a 79% probability on the CLARITY Act reaching a Senate vote b
 
 A $3 million Kalshi contract gives the bill a 36% chance of becoming law in 2026 and a 62% chance before the end of 2027. Polymarket is at 39% for this year. I'd read that spread as the market pricing in a Senate pass but heavy uncertainty about House conference, presidential signature timing, and the usual implementation lag. Prediction markets here are tracking narrative momentum as much as legislative fundamentals.
 
+## What Is Actually at Stake
+
+Market structure rules matter most to the buyers who cannot act without them. The [institutional shift into Bitcoin](/articles/bitcoin-institutional-2026/) happened through ETFs precisely because that wrapper had regulatory clarity the broader market still lacks; the CLARITY Act would extend something similar to assets and venues beyond spot Bitcoin.
+
 ## What to Watch
 
 The revised draft is the near-term signal. If it drops this week and bipartisan objections (three senators have already raised ethics concerns) don't force another round of rewrites, a floor vote before recess becomes plausible. If the text slips, the 79% Kalshi probability will compress just as fast as it expanded.

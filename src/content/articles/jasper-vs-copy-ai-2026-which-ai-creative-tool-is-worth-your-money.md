@@ -57,6 +57,8 @@ Its brand voice feature trains on a style guide or content upload, so output sou
 
 The Pro plan at $59/month annually suits a solo marketer or small team producing high-volume written content that needs to stay on-brand across channels. The Business plan adds API access, custom AI templates, and SSO for larger organizations with security requirements. Jasper also offers a 20% non-profit discount.
 
+Writing the copy is one line item; sending it is another. If your team also needs the delivery layer, [MailerLite and Brevo](/articles/mailerlite-vs-brevo-for-small-businesses-2026-which-email-marketing-to/) handle that side at a fraction of these prices.
+
 One structural advantage: Jasper runs on an LLM-agnostic architecture, meaning it is not locked to a single model provider. That gives it some insulation against quality or pricing shifts from any one upstream vendor.
 
 ## What Is Copy.ai Best At?
@@ -80,6 +82,8 @@ Leonardo built its reputation on AI image generation, particularly for game asse
 **Revenue operations or GTM team:** Copy.ai, if your use case genuinely involves automating content workflows at scale across dozens of seats. The unlimited chat words and multi-model access have real value in that context. But request a price quote before assuming it fits your budget — no public per-seat figure exists in the available data.
 
 **Image-generation-first workflows:** Leonardo.ai may be the right answer. The data to confirm that isn't available here, so verify current pricing directly before making any purchasing decision.
+
+There is a newer line item worth budgeting for alongside either tool: knowing whether the content you publish is being cited by AI assistants at all. That is a separate category now, and we compared two of its platforms in [Otterly AI vs Trakkr](/articles/otterly-ai-vs-trakkr-2026-which-ai-search-visibility-tool-is-right-for/).
 
 The sharper implication here is structural. Copy.ai's move toward workflow automation and Jasper's focus on brand-voice writing means these two tools are no longer fighting for the same customer. Buyers who shop them side-by-side are probably asking the wrong question. The right question is which problem you're actually solving — and whether the pricing model of the tool you're considering was built for someone with your workflow, or someone else's.
 

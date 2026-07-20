@@ -40,6 +40,8 @@ The answer depends on your volume. If you clear $6,000 or more per year through 
 
 On Revolut Business, the Basic plan's $1,000 monthly limit will stop most working freelancers cold. Grow, at $40 per month, lifts that to $20,000 — enough headroom for most mid-volume freelancers. Scale, at $140 per month, raises it to $80,000 and suits higher earners. Annual plans save up to 20% on Grow and up to 22% on Scale, which softens the monthly burn if you commit.
 
+Both platforms are about receiving money that a client has already sent. If you also need to take card payments directly from customers, that is a separate stack — our [Square vs PayPal comparison](/articles/square-vs-paypal-for-small-businesses-in-2026-which-payment-processor-/) covers what processing those payments actually costs.
+
 ## What is Payoneer actually good at?
 
 Payoneer is built around getting paid across borders. It supports receiving payments across 190+ countries and territories in 70+ currencies, with multi-currency receiving accounts that let clients pay you in their local currency. The platform also handles invoicing directly, so clients can pay from a payment request without wiring blind.
@@ -59,6 +61,8 @@ For a freelancer with irregular income or a small client base, Payoneer's no-sub
 For a freelancer with consistent monthly volume above $1,000 and a need for expense controls or team-adjacent features, Revolut Business Grow at $40 per month buys real infrastructure. The $20,000 monthly limit accommodates mid-to-high earners, and the annual discount makes the math more palatable over a full year.
 
 Enterprise users or agencies moving $80,000+ per month should price the Scale plan carefully against Payoneer's flat-fee model — at that volume, even a small percentage difference compounds quickly.
+
+Fees are only one side of freelance finances. Tracking what actually stays after them is the other, and a dedicated budgeting tool handles that better than a bank dashboard — we compared [YNAB and Monarch Money](/articles/ynab-vs-monarch-money-2026-which-budgeting-app-is-worth-paying-for/) on exactly that job.
 
 Before committing to either, the most useful test is specific: run one real client payment through a trial period and track the total received versus what was invoiced. Fees have a way of looking small in a table and feeling large in a bank statement. Start with the payment flow that mirrors your actual client geography, and let the net deposit tell you which platform keeps more of your money where it belongs.
 

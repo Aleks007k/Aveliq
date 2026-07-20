@@ -45,6 +45,8 @@ PayPal's pricing is entirely transaction-based, with no monthly fee for its core
 
 Take the hype with a little salt on PayPal's "simple" pricing story: international transactions add 1.50% on top of the domestic rate, and the Invoice Subscription Service runs $14.99 per month. ACH invoice payments through that service cost 1% capped at $10 per transaction, which is attractive for B2B businesses that can push customers toward bank transfers.
 
+That 1.50% cross-border surcharge is worth pausing on. If most of your income arrives from clients abroad rather than customers at a checkout, a receiving account may cost you less than a processor — we compared [Payoneer and Revolut Business](/articles/payoneer-vs-revolut-business-for-freelancers-2026-which-pays-you-more/) on exactly that scenario.
+
 ## Who should use Square?
 
 Square fits best when you have a physical location or split your sales between in-person and online. The flat monthly structure is predictable, and the bundled tools — POS, site builder, invoicing with estimates and contracts, banking — reduce the number of separate vendors you need. I'd lean toward Square for any retail or food-service business processing below the $250,000 threshold, where the Plus plan at $49 per month per location gives you a loyalty program without getting into custom-pricing territory.

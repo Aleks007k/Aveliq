@@ -1,7 +1,7 @@
 ---
-title: "'Plausible vs Fathom Analytics: Which Privacy-First Tool Is Worth It in 2026?'"
-seoTitle: "'Plausible vs Fathom Analytics: Best Privacy-First Tool 2026'"
-description: "'Plausible starts at $9/month; Fathom at $15. But price isn't the whole story. Here's which cookieless analytics tool actually fits your site.'"
+title: "Plausible vs Fathom Analytics: Which Privacy-First Tool Is Worth It in 2026?"
+seoTitle: "Plausible vs Fathom Analytics: Best Privacy-First Tool 2026"
+description: "Plausible starts at $9/month; Fathom at $15. But price isn't the whole story. Here's which cookieless analytics tool actually fits your site."
 category: "business"
 type: "analysis"
 author: "Alex Reeve"

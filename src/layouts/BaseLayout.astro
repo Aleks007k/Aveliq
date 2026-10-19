@@ -60,9 +60,12 @@ const finalCanonical = canonical ?? Astro.url.href;
     </a>
   </div>
   <ul class="nav-links">
-    {CATEGORIES.map((c) => <a href={`/category/${c.slug}/`}>{c.label}</a>)}
+    {CATEGORIES.map((c) => {
+      const href = `/category/${c.slug}/`;
+      const here = Astro.url.pathname.startsWith(href);
+      return <li><a href={href} title={c.label} aria-current={here ? 'page' : undefined}>{c.nav}</a></li>;
+    })}
   </ul>
-  <div class="nav-right">Live</div>
   <button class="nav-burger" id="navBurger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>

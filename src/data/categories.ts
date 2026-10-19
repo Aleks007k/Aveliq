@@ -3,7 +3,8 @@
 
 export interface Category {
   slug: string;   // URL: /category/<slug>
-  label: string;  // short label for menus and tags
+  label: string;  // label for tags, footer and mobile menu
+  nav: string;    // very short label for the top menu (one line on laptops)
   title: string;  // category page H1
   desc: string;   // category page description + meta description
   color: string;  // accent color (cards, OG image)
@@ -15,6 +16,7 @@ export const CATEGORIES: Category[] = [
   {
     slug: 'payments',
     label: 'Payments & Invoicing',
+    nav: 'Payments',
     title: 'Payments & Invoicing',
     desc: 'Payment processors, invoicing and client billing tools for freelancers and small teams, compared on real fees.',
     color: '#a78bfa',
@@ -28,6 +30,7 @@ export const CATEGORIES: Category[] = [
   {
     slug: 'email-marketing',
     label: 'Email & Marketing',
+    nav: 'Email',
     title: 'Email & Marketing',
     desc: 'Email, newsletter and marketing tools for freelancers and small teams, with prices worked out for your list size.',
     color: '#4d9fff',
@@ -40,6 +43,7 @@ export const CATEGORIES: Category[] = [
   {
     slug: 'scheduling-forms',
     label: 'Scheduling & Forms',
+    nav: 'Scheduling',
     title: 'Scheduling & Forms',
     desc: 'Booking, scheduling and form builders for freelancers and small teams, compared plan by plan.',
     color: '#34d399',
@@ -55,6 +59,7 @@ export const CATEGORIES: Category[] = [
   {
     slug: 'sales',
     label: 'Sales & Projects',
+    nav: 'Sales',
     title: 'Sales & Projects',
     desc: 'CRMs, outreach and project management tools for small teams, with per-seat costs worked out for real team sizes.',
     color: '#f7931a',
@@ -68,6 +73,7 @@ export const CATEGORIES: Category[] = [
   {
     slug: 'ai',
     label: 'AI Tools for Work',
+    nav: 'AI Tools',
     title: 'AI Tools for Work',
     desc: 'AI writing, meeting, voice, video and presentation tools for freelancers and small teams, compared on what you actually pay.',
     color: '#d4a853',

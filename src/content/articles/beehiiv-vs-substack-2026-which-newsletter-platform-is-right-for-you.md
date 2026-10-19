@@ -2,7 +2,7 @@
 title: "Beehiiv vs Substack (2026): Which Newsletter Platform Is Right for You?"
 seoTitle: "Beehiiv vs Substack (2026): Which Platform Should You Choose?"
 description: "Beehiiv and Substack take opposite bets on how creators should pay. Here's which model wins for your list size, revenue goals, and publishing needs."
-category: "business"
+category: "email-marketing"
 type: "analysis"
 author: "Alex Reeve"
 date: "2026-07-05"

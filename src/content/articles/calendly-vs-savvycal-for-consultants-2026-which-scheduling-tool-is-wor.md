@@ -2,7 +2,7 @@
 title: "Calendly vs SavvyCal for Consultants (2026): Which Scheduling Tool Is Worth It?"
 seoTitle: "Calendly vs SavvyCal for Consultants (2026): Which Is Better?"
 description: "Calendly and SavvyCal both solve calendar booking, but they're built around different people. Here's which one fits how consultants actually work."
-category: "business"
+category: "scheduling-forms"
 type: "analysis"
 author: "Alex Reeve"
 date: "2026-08-01"

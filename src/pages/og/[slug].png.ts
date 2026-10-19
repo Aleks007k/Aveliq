@@ -3,6 +3,7 @@ import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import fs from 'fs';
 import path from 'path';
+import { catLabel as labelOf, catColor as colorOf, getCategory } from '../../data/categories';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -16,18 +17,12 @@ interface Props {
   article: CollectionEntry<'articles'>;
 }
 
-const catLabel: Record<string, string> = {
-  ai: 'AI', finance: 'Finance', crypto: 'Crypto',
-  business: 'Business', fintech: 'Fintech'
-};
+const catLabel = new Proxy({} as Record<string, string>, { get: (_t, k) => labelOf(String(k)) });
+const catColor = new Proxy({} as Record<string, string>, { get: (_t, k) => colorOf(String(k)) });
 
-const catColor: Record<string, string> = {
-  ai: '#d4a853', finance: '#4d9fff', crypto: '#f7931a',
-  business: '#34d399', fintech: '#a78bfa'
-};
-
-function getVisual(cat: string): string {
-  const c = catColor[cat] || '#d4a853';
+function getVisual(slug: string): string {
+  const c = catColor[slug] || '#d4a853';
+  const cat = getCategory(slug)?.visual ?? slug;
   const visuals: Record<string, string> = {
     ai: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 315" width="480" height="630"><defs><radialGradient id="g" cx="65%" cy="50%" r="55%"><stop offset="0" stop-color="${c}" stop-opacity=".22"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></radialGradient></defs><rect width="240" height="315" fill="url(#g)"/><g stroke="${c}" fill="none"><circle cx="160" cy="157" r="100" stroke-width="1" opacity=".25"/><circle cx="160" cy="157" r="74" stroke-width="1" opacity=".4"/><circle cx="160" cy="157" r="48" stroke-width="1.2" opacity=".6"/><circle cx="160" cy="157" r="22" stroke-width="1.5" opacity=".9"/></g><circle cx="160" cy="157" r="6" fill="${c}"/><circle cx="160" cy="57" r="4" fill="${c}"/><circle cx="234" cy="157" r="4" fill="${c}"/><circle cx="112" cy="205" r="4" fill="${c}"/></svg>`,
     finance: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 315" width="480" height="630"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".3"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient></defs><path d="M0,220 L40,200 L80,230 L120,160 L160,180 L200,110 L240,130 L240,315 L0,315 Z" fill="url(#g)"/><polyline points="0,220 40,200 80,230 120,160 160,180 200,110 240,130" stroke="${c}" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="200" cy="110" r="5" fill="${c}"/></svg>`,

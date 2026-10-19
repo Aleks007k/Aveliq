@@ -755,6 +755,10 @@ a { color: inherit; text-decoration: none; }
 
 /* Категорийные цвета — тонкие акценты */
 .card[data-cat="ai"]::before { background: #d4a853; }
+.card[data-cat="payments"]::before { background: #a78bfa; }
+.card[data-cat="email-marketing"]::before { background: #4d9fff; }
+.card[data-cat="scheduling-forms"]::before { background: #34d399; }
+.card[data-cat="sales"]::before { background: #f7931a; }
 .card[data-cat="finance"]::before { background: #4d9fff; }
 .card[data-cat="crypto"]::before { background: #f7931a; }
 .card[data-cat="business"]::before { background: #34d399; }

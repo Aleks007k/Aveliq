@@ -1,15 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { catLabel as labelOf } from '../../data/categories';
 
 function slugify(name: string): string {
   return name.toLowerCase().trim().replace(/\s+/g, '-');
 }
 
-const catLabel: Record<string, string> = {
-  ai: 'AI', finance: 'Finance', crypto: 'Crypto',
-  business: 'Business', fintech: 'Fintech'
-};
+const catLabel = new Proxy({} as Record<string, string>, { get: (_t, k) => labelOf(String(k)) });
 
 const siteUrl = 'https://aveliq.net';
 

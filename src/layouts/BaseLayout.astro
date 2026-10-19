@@ -2,6 +2,7 @@
 import '../styles.css';
 import TickerBar from '../components/TickerBar.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import { CATEGORIES } from '../data/categories';
 const { title, description, ogImage, ogType, canonical, schema, breadcrumbSchema, noindex } = Astro.props;
 const siteUrl = 'https://aveliq.net';
 const finalOgImage = ogImage ?? `${siteUrl}/og-default.jpg`;
@@ -60,11 +61,7 @@ const finalCanonical = canonical ?? Astro.url.href;
     </a>
   </div>
   <ul class="nav-links">
-    <a href="/category/ai">AI</a>
-    <a href="/category/finance">Finance</a>
-    <a href="/category/crypto">Crypto</a>
-    <a href="/category/business">Business</a>
-    <a href="/category/fintech">Fintech</a>
+    {CATEGORIES.map((c) => <a href={`/category/${c.slug}/`}>{c.label}</a>)}
   </ul>
   <div class="nav-right">Live</div>
   <button class="nav-burger" id="navBurger" aria-label="Menu">
@@ -73,11 +70,7 @@ const finalCanonical = canonical ?? Astro.url.href;
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/category/ai">AI</a>
-  <a href="/category/finance">Finance</a>
-  <a href="/category/crypto">Crypto</a>
-  <a href="/category/business">Business</a>
-  <a href="/category/fintech">Fintech</a>
+  {CATEGORIES.map((c) => <a href={`/category/${c.slug}/`}>{c.label}</a>)}
   <a href="/articles/">All Stories</a>
   <a href="/newsletter">Newsletter</a>
 </div>
@@ -114,19 +107,16 @@ const finalCanonical = canonical ?? Astro.url.href;
         </svg>
         <span class="logo-name">AVELIQ</span>
       </a>
-      <div class="footer-desc">Signal over noise. Intelligence on AI, finance and fintech.</div>
+      <div class="footer-desc">What small-team software really costs.</div>
     </div>
     <div class="footer-links">
       <div class="footer-col">
-        <div class="footer-col-t">Markets</div>
-        <a href="/category/ai">AI</a>
-        <a href="/category/finance">Finance</a>
-        <a href="/category/crypto">Crypto</a>
+        <div class="footer-col-t">Categories</div>
+        {CATEGORIES.slice(0, 3).map((c) => <a href={`/category/${c.slug}/`}>{c.label}</a>)}
       </div>
       <div class="footer-col">
         <div class="footer-col-t">More</div>
-        <a href="/category/business">Business</a>
-        <a href="/category/fintech">Fintech</a>
+        {CATEGORIES.slice(3).map((c) => <a href={`/category/${c.slug}/`}>{c.label}</a>)}
         <a href="/newsletter">Newsletter</a>
       </div>
       <div class="footer-col">

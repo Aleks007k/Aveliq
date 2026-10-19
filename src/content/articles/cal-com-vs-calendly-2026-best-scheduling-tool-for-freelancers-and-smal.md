@@ -2,7 +2,7 @@
 title: "Cal.com vs Calendly (2026): Best Scheduling Tool for Freelancers and Small Teams"
 seoTitle: "Cal.com vs Calendly 2026: Best Scheduling Tool Compared"
 description: "Cal.com's free tier includes unlimited event types and Stripe payments. Calendly's free plan caps you at one. Here's which tool wins for freelancers and small teams."
-category: "business"
+category: "scheduling-forms"
 type: "analysis"
 author: "Alex Reeve"
 date: "2026-10-05"

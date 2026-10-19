@@ -2,7 +2,7 @@
 title: "ClickUp vs Asana for Small Teams: Which Is Worth Paying For in 2026?"
 seoTitle: "ClickUp vs Asana for Small Teams: Best Value in 2026"
 description: "ClickUp and Asana both target small teams, but their pricing, free tiers, and feature sets pull in different directions. Here's which one is worth paying for."
-category: "business"
+category: "sales"
 type: "analysis"
 author: "Alex Reeve"
 date: "2026-06-28"

@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { CATEGORY_SLUGS, LEGACY_CATEGORY_SLUGS } from './data/categories';
 
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/articles' }),
@@ -7,7 +8,9 @@ const articles = defineCollection({
     title: z.string(),
     seoTitle: z.string().optional(),
     description: z.string(),
-    category: z.string(),
+    // One of the 5 site rubrics (src/data/categories.ts). Legacy values are tolerated
+    // only for articles not yet reassigned; they get no category page.
+    category: z.enum([...CATEGORY_SLUGS, ...LEGACY_CATEGORY_SLUGS]),
     type: z.string(),
     author: z.string(),
     date: z.string(),

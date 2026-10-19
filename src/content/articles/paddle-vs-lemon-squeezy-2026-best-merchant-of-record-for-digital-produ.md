@@ -2,7 +2,7 @@
 title: "Paddle vs. Lemon Squeezy (2026): Best Merchant of Record for Digital Products"
 seoTitle: "Paddle vs. Lemon Squeezy 2026: Best Merchant of Record"
 description: "Paddle or Lemon Squeezy? Compare fees, tax compliance, and features to find the right merchant of record for your digital product business."
-category: "fintech"
+category: "payments"
 type: "analysis"
 author: "Sophia Chen"
 date: "2026-08-19"

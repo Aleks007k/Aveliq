@@ -66,6 +66,7 @@ const finalCanonical = canonical ?? Astro.url.href;
       return <li><a href={href} title={c.label} aria-current={here ? 'page' : undefined}>{c.nav}</a></li>;
     })}
   </ul>
+  <div class="nav-right">Live</div>
   <button class="nav-burger" id="navBurger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>

@@ -2,7 +2,7 @@
 title: "Pipedrive vs Close (2026): Best CRM for Small Sales Teams"
 seoTitle: "Pipedrive vs Close (2026): Best CRM for Small Sales Teams"
 description: "Pipedrive's visual pipeline vs Close's built-in calling stack — we break down pricing, features, and which CRM wins for small sales teams in 2026."
-category: "business"
+category: "sales"
 type: "analysis"
 author: "Alex Reeve"
 date: "2026-07-20"

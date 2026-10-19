@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { catLabel as labelOf } from '../data/categories';
 
 const allArticles = await getCollection('articles');
 const articles = allArticles
@@ -15,13 +16,10 @@ const topStories = articles.filter((a: CollectionEntry<'articles'>) => a.id !== 
 const latest = articles.filter((a: CollectionEntry<'articles'>) => a.id !== featured?.id).slice(0, 4);
 const heroLatest = articles.filter((a: CollectionEntry<'articles'>) => a.id !== featured?.id).slice(0, 5);
 
-const catLabel: Record<string, string> = {
-  ai: 'AI', finance: 'Finance', crypto: 'Crypto',
-  business: 'Business', fintech: 'Fintech'
-};
+const catLabel = new Proxy({} as Record<string, string>, { get: (_t, k) => labelOf(String(k)) });
 ---
 
-<BaseLayout title="Signal over noise" description="Intelligence on AI, finance and fintech — without the noise.">
+<BaseLayout title="What small-team software really costs" description="Software comparisons for freelancers and small teams: invoicing, email, scheduling, sales and AI tools. Vendor prices, dated, with real team-size math.">
 
 <!-- HERO -->
 <div class="hero">

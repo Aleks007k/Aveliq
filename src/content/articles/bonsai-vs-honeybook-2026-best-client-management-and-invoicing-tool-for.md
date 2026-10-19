@@ -2,7 +2,7 @@
 title: "Bonsai vs HoneyBook (2026): Best Client Management & Invoicing Tool for Freelancers"
 seoTitle: "Bonsai vs HoneyBook 2026: Best Freelance Client Management Tool"
 description: "Bonsai's $9 plan has no invoicing. The real comparison is Bonsai Essentials at $19/month against HoneyBook Starter at $29/month. Here's which one a freelancer should pay for."
-category: "business"
+category: "payments"
 type: "analysis"
 author: "Hanna Yovska"
 date: "2026-10-18"

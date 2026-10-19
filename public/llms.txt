@@ -1,16 +1,16 @@
 # Aveliq
 
-> Signal over noise. Independent analysis on AI, finance, fintech, crypto, and business.
+> What small-team software really costs.
 
-Aveliq is an independent media publication covering the forces shaping technology and markets. Coverage focuses on clear, analytical explanation rather than hype — artificial intelligence, financial markets, digital assets, business strategy, and fintech.
+Aveliq publishes software comparisons for freelancers and small teams: invoicing, email, scheduling, sales and AI tools. Prices come from vendor pricing pages, are dated, and are worked out for real team sizes.
 
 ## Categories
-- [AI](https://aveliq.net/category/ai): Artificial intelligence, LLMs, and automation.
-- [Finance](https://aveliq.net/category/finance): Monetary policy, capital markets, and macro.
-- [Crypto](https://aveliq.net/category/crypto): Digital assets and institutional adoption.
-- [Business](https://aveliq.net/category/business): Corporate strategy, venture capital, and startups.
-- [Fintech](https://aveliq.net/category/fintech): Payments, banking-as-a-service, and embedded finance.
+- [Payments & Invoicing](https://aveliq.net/category/payments): Payment processors, invoicing and client billing tools.
+- [Email & Marketing](https://aveliq.net/category/email-marketing): Email, newsletter and marketing tools.
+- [Scheduling & Forms](https://aveliq.net/category/scheduling-forms): Booking, scheduling and form builders.
+- [Sales & Projects](https://aveliq.net/category/sales): CRMs, outreach and project management.
+- [AI Tools for Work](https://aveliq.net/category/ai): AI writing, meeting, voice, video and presentation tools.
 
 ## About
 - [About Aveliq](https://aveliq.net/about): Editorial approach and transparency.
-- [Newsletter](https://aveliq.net/newsletter): Weekly analysis on AI, finance, and fintech.
+- [Newsletter](https://aveliq.net/newsletter): Software comparisons for freelancers and small teams.

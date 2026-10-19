@@ -2,10 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { CATEGORIES, getCategory } from '../../data/categories';
 
 export async function getStaticPaths() {
-  const categories = ['ai', 'finance', 'crypto', 'business', 'fintech'];
-  return categories.map(cat => ({ params: { cat } }));
+  return CATEGORIES.map((c) => ({ params: { cat: c.slug } }));
 }
 
 const { cat } = Astro.params as { cat: string };
@@ -17,65 +17,14 @@ const articles = allArticles
     new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
   );
 
-const catMeta: Record<string, { title: string; icon: string; desc: string }> = {
-  ai: {
-    title: 'Artificial Intelligence',
-    icon: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <rect x="8" y="8" width="16" height="16" stroke="#d4a853" stroke-width="1.5"/>
-      <circle cx="16" cy="16" r="3" fill="#d4a853"/>
-      <line x1="16" y1="2" x2="16" y2="8" stroke="#d4a853" stroke-width="1.5"/>
-      <line x1="16" y1="24" x2="16" y2="30" stroke="#d4a853" stroke-width="1.5"/>
-      <line x1="2" y1="16" x2="8" y2="16" stroke="#d4a853" stroke-width="1.5"/>
-      <line x1="24" y1="16" x2="30" y2="16" stroke="#d4a853" stroke-width="1.5"/>
-    </svg>`,
-    desc: 'Analysis on AI, LLMs and automation.'
-  },
-  finance: {
-    title: 'Finance & Markets',
-    icon: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <polyline points="2,24 10,14 16,18 24,8 30,10" stroke="#d4a853" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="30" cy="10" r="2" fill="#d4a853"/>
-      <line x1="2" y1="28" x2="30" y2="28" stroke="#d4a853" stroke-width="1"/>
-    </svg>`,
-    desc: 'Monetary policy, capital markets, macro.'
-  },
-  crypto: {
-    title: 'Crypto & Digital Assets',
-    icon: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <polygon points="16,2 30,9 30,23 16,30 2,23 2,9" stroke="#d4a853" stroke-width="1.5" fill="none"/>
-      <line x1="16" y1="9" x2="16" y2="23" stroke="#d4a853" stroke-width="1.5"/>
-      <line x1="10" y1="12" x2="22" y2="12" stroke="#d4a853" stroke-width="1.5"/>
-      <line x1="10" y1="20" x2="22" y2="20" stroke="#d4a853" stroke-width="1.5"/>
-    </svg>`,
-    desc: 'On-chain intelligence, institutional adoption.'
-  },
-  business: {
-    title: 'Business & Strategy',
-    icon: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <rect x="2" y="14" width="8" height="16" stroke="#d4a853" stroke-width="1.5"/>
-      <rect x="12" y="8" width="8" height="22" stroke="#d4a853" stroke-width="1.5"/>
-      <rect x="22" y="2" width="8" height="28" stroke="#d4a853" stroke-width="1.5"/>
-    </svg>`,
-    desc: 'Corporate strategy, venture capital, startups.'
-  },
-  fintech: {
-    title: 'Fintech & Payments',
-    icon: `<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-      <rect x="2" y="8" width="28" height="18" rx="2" stroke="#d4a853" stroke-width="1.5"/>
-      <line x1="2" y1="14" x2="30" y2="14" stroke="#d4a853" stroke-width="1.5"/>
-      <rect x="6" y="18" width="6" height="4" fill="#d4a853" opacity=".5"/>
-    </svg>`,
-    desc: 'Payments, banking-as-a-service, embedded finance.'
-  },
-};
-
 const typeLabel: Record<string, string> = {
   analysis: 'Analysis',
   news: 'News',
   'deep-dive': 'Deep Dive'
 };
 
-const meta = catMeta[cat] ?? { title: cat, icon: '📰', desc: '' };
+const c = getCategory(cat)!;
+const meta = { title: c.title, icon: c.icon, desc: c.desc };
 ---
 
 <BaseLayout title={meta.title} description={meta.desc}>
@@ -96,11 +45,9 @@ const meta = catMeta[cat] ?? { title: cat, icon: '📰', desc: '' };
 
   <div class="cat-nav">
     <div class="cat-nav-inner">
-      <a href="/category/ai"       class={cat === 'ai'       ? 'cat-nav-btn active' : 'cat-nav-btn'}>AI</a>
-      <a href="/category/finance"  class={cat === 'finance'  ? 'cat-nav-btn active' : 'cat-nav-btn'}>Finance</a>
-      <a href="/category/crypto"   class={cat === 'crypto'   ? 'cat-nav-btn active' : 'cat-nav-btn'}>Crypto</a>
-      <a href="/category/business" class={cat === 'business' ? 'cat-nav-btn active' : 'cat-nav-btn'}>Business</a>
-      <a href="/category/fintech"  class={cat === 'fintech'  ? 'cat-nav-btn active' : 'cat-nav-btn'}>Fintech</a>
+      {CATEGORIES.map((c) => (
+        <a href={`/category/${c.slug}/`} class={cat === c.slug ? 'cat-nav-btn active' : 'cat-nav-btn'}>{c.label}</a>
+      ))}
     </div>
   </div>
 

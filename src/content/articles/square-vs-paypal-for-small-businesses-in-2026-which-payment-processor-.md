@@ -2,7 +2,7 @@
 title: "Square vs PayPal for Small Businesses in 2026: Which Payment Processor Is Right for You?"
 seoTitle: "Square vs PayPal for Small Businesses 2026: Fees & Features"
 description: "Square and PayPal both serve small businesses, but their fee structures and features point to very different use cases. Here's how to choose."
-category: "fintech"
+category: "payments"
 type: "analysis"
 author: "Sophia Chen"
 date: "2026-07-16"

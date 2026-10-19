@@ -2,7 +2,7 @@
 title: "Otterly AI vs. Trakkr (2026): Which AI Search Visibility Tool Is Right for You?"
 seoTitle: "Otterly AI vs. Trakkr (2026): AI Search Visibility Tools Compared"
 description: "Otterly AI starts at $29/month; Trakkr covers 8 AI models from $100/month. Here's which platform fits your brand's tracking needs and budget."
-category: "ai"
+category: "email-marketing"
 type: "analysis"
 author: "Hanna Yovska"
 date: "2026-07-14"

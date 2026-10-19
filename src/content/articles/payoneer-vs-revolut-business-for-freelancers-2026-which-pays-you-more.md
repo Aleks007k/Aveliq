@@ -2,7 +2,7 @@
 title: "Payoneer vs. Revolut Business for Freelancers (2026): Which Pays You More?"
 seoTitle: "Payoneer vs. Revolut Business for Freelancers 2026"
 description: "Payoneer or Revolut Business — which costs a freelancer less in 2026? We break down fees, limits, and features so you can keep more of what you earn."
-category: "fintech"
+category: "payments"
 type: "analysis"
 author: "Sophia Chen"
 date: "2026-07-10"

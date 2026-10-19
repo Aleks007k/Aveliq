@@ -1,7 +1,7 @@
 ---
-title: "'Gamma vs Beautiful.ai (2026): Which AI Presentation Tool Is Worth It?'"
-seoTitle: "'Gamma vs Beautiful.ai 2026: AI Presentation Tool Comparison'"
-description: "'Gamma uses a credit-based AI model; Beautiful.ai runs on Smart Slide automation. Here's which one fits your workflow and budget in 2026.'"
+title: "Gamma vs Beautiful.ai (2026): Which AI Presentation Tool Is Worth It?"
+seoTitle: "Gamma vs Beautiful.ai 2026: AI Presentation Tool Comparison"
+description: "Gamma uses a credit-based AI model; Beautiful.ai runs on Smart Slide automation. Here's which one fits your workflow and budget in 2026."
 category: "ai"
 type: "analysis"
 author: "Aveliq Editorial"

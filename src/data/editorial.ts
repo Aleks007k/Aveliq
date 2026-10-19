@@ -11,4 +11,4 @@ export const EDITORIAL = {
     'where the free plan stops, and the plan you actually need.',
 } as const;
 
-export const EDITORIAL_PATH = `/author/${EDITORIAL.slug}/`;
+export const EDITORIAL_PATH = `/authors/${EDITORIAL.slug}/`;

@@ -4,7 +4,7 @@ seoTitle: "Podia vs. Teachable (2026): Pricing, Fees & Features Compared"
 description: "Podia and Teachable take opposite bets on what course creators need. Here's how their pricing, transaction fees, and features stack up in 2026."
 category: "business"
 type: "analysis"
-author: "Alex Reeve"
+author: "Aveliq Editorial"
 date: "2026-08-08"
 readTime: 5
 tags: ["online courses", "creator tools", "podia", "teachable", "digital products", "comparison"]

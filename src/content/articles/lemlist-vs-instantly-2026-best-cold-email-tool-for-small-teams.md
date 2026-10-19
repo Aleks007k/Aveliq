@@ -14,7 +14,7 @@ draft: false
 
 Lemlist bills per user. Instantly doesn't.
 
-That one difference decides most small-team comparisons before features enter the picture. My read: these are different products wearing similar labels. Pick Lemlist if you need email plus LinkedIn, calls and SMS in one sequence. Pick Instantly if you mainly need to send a lot of email cheaply without burning your domains.
+That one difference decides most small-team comparisons before features enter the picture. In short, these are different products wearing similar labels. Pick Lemlist if you need email plus LinkedIn, calls and SMS in one sequence. Pick Instantly if you mainly need to send a lot of email cheaply without burning your domains.
 
 <div class="cmp-scroll"><div class="cmp-wrap">
 <table class="cmp">

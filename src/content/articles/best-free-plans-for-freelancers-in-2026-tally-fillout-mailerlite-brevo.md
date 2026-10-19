@@ -51,7 +51,7 @@ The response cap is the limiting factor. Hit 1,001 submissions in a busy month a
 
 ## [MailerLite](https://www.mailerlite.com/pricing): Is MailerLite's free plan good enough to start an email list?
 
-For a brand-new list, yes. The free plan allows up to 250 subscribers, 2 user seats, and 2,500 monthly emails. It also includes campaigns, automations, a website, a landing page, and signup forms — a surprisingly complete toolkit for someone just starting out. I'd lean toward this over Brevo for freelancers who want automations from day one, since both are free but MailerLite's interface is more focused on email-first workflows.
+For a brand-new list, yes. The free plan allows up to 250 subscribers, 2 user seats, and 2,500 monthly emails. It also includes campaigns, automations, a website, a landing page, and signup forms — a surprisingly complete toolkit for someone just starting out. We'd pick this over Brevo for freelancers who want automations from day one, since both are free but MailerLite's interface is more focused on email-first workflows.
 
 The 250-subscriber ceiling is where reality lands. Grow beyond that and you're moving to the Comfort plan, starting at $12/month. That's not a long runway, but it's enough to test whether your list is worth building before committing money to it.
 

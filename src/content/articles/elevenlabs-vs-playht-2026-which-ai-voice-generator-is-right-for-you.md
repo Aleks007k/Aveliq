@@ -12,7 +12,7 @@ sources: ["https://elevenlabs.io/pricing", "https://play.ht/pricing/"]
 draft: false
 ---
 
-A podcast producer on a deadline doesn't care which company has the better press release. She cares whether her 40-minute episode will eat through her monthly quota before she can export a final cut. That question — how far does my plan actually stretch? — is where ElevenLabs and PlayHT diverge most sharply, and it's the one the pricing pages bury in footnotes.
+A podcast producer on a deadline doesn't care which company has the better press release. She cares whether her 40-minute episode will eat through her monthly quota before she can export a final cut. That question — how far does the plan actually stretch? — is where ElevenLabs and PlayHT diverge most sharply, and it's the one the pricing pages bury in footnotes.
 
 Both platforms offer AI voice generation, voice cloning, and commercial licensing. But they measure usage in different units (credits vs characters), structure their free tiers differently, and charge at price points that only overlap at the $99/month level. Picking the wrong one doesn't just cost money; it can strand a project mid-production when quotas reset.
 

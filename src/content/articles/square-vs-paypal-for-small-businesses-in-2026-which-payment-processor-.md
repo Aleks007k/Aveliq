@@ -49,7 +49,7 @@ That 1.50% cross-border surcharge is worth pausing on. If most of your income ar
 
 ## Who should use Square?
 
-Square fits best when you have a physical location or split your sales between in-person and online. The flat monthly structure is predictable, and the bundled tools — POS, site builder, invoicing with estimates and contracts, banking — reduce the number of separate vendors you need. I'd lean toward Square for any retail or food-service business processing below the $250,000 threshold, where the Plus plan at $49 per month per location gives you a loyalty program without getting into custom-pricing territory.
+Square fits best when you have a physical location or split your sales between in-person and online. The flat monthly structure is predictable, and the bundled tools — POS, site builder, invoicing with estimates and contracts, banking — reduce the number of separate vendors you need. We'd pick Square for any retail or food-service business processing below the $250,000 threshold, where the Plus plan at $49 per month per location gives you a loyalty program without getting into custom-pricing territory.
 
 The banking integration is underrated for early-stage businesses. If you are keeping revenue in a Square checking account and drawing down a Square loan, your cash flow picture is at least in one dashboard.
 
@@ -67,7 +67,7 @@ For brick-and-mortar and hybrid businesses: Square. The flat monthly structure, 
 
 For online-first businesses and B2B service firms that invoice: PayPal. The lower card rate at 2.99%, the cheap ACH option, and the checkout network effect tip the balance. Just budget for the international surcharge if any of your revenue crosses borders.
 
-One thing neither platform makes easy to see upfront: the true all-in effective rate once fixed fees, plan costs, and surcharges are combined. Before you commit, run your actual monthly transaction mix through both fee schedules. The answer may surprise you — and it's yours to calculate, not mine to guess at.
+One thing neither platform makes easy to see upfront: the true all-in effective rate once fixed fees, plan costs, and surcharges are combined. Before you commit, run your actual monthly transaction mix through both fee schedules. The answer may surprise you — and it's yours to calculate, not ours to guess at.
 
 ---
 

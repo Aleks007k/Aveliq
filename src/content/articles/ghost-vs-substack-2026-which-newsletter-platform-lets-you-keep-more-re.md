@@ -56,7 +56,7 @@ The full fee breakdown is visible in the Stripe dashboard under Transactions —
 
 This is the practical question. Ghost Publisher costs $29/month billed yearly, which equals Substack's 10% cut on $290/month of subscription revenue. Above roughly $290/month in paid revenue (for an audience up to 1,000 members), Ghost is cheaper. At $1,000/month in revenue, Substack takes $100; Ghost costs $29. That gap widens every month you grow.
 
-I'd lean toward Ghost for any creator already generating meaningful subscription income, because the flat fee stops scaling with your success. Substack's model is generous at zero revenue and increasingly expensive as revenue grows. Stripe processing fees apply on both platforms, so they don't change which one is cheaper.
+We'd pick Ghost for any creator already generating meaningful subscription income, because the flat fee stops scaling with your success. Substack's model is generous at zero revenue and increasingly expensive as revenue grows. Stripe processing fees apply on both platforms, so they don't change which one is cheaper.
 
 ## Which Platform Suits Different Creators?
 

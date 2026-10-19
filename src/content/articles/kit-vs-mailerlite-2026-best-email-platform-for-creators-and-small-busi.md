@@ -55,7 +55,7 @@ The catch shows up when you compare the Comfort plan's automation cap (50) again
 
 Kit was built for individual creators: writers, course sellers, podcasters, and anyone whose business *is* the list. The subscriber-based pricing model makes sense for people who send frequently to a single audience and care about deliverability and monetization from day one.
 
-I'd lean toward Kit for anyone planning to run automated sequences, sell digital products, or use referral mechanics to grow. The free tier up to 10,000 subscribers is arguably the most generous in this category, and the Pro plan's SparkLoop integration is a meaningful tool if growth is the priority. The scaling pricing model is the main thing to stress-test before committing: a large list can get expensive quickly.
+We'd pick Kit for anyone planning to run automated sequences, sell digital products, or use referral mechanics to grow. The free tier up to 10,000 subscribers is arguably the most generous in this category, and the Pro plan's SparkLoop integration is a meaningful tool if growth is the priority. The scaling pricing model is the main thing to stress-test before committing: a large list can get expensive quickly.
 
 ## MailerLite: Who should choose it?
 

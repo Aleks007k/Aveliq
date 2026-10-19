@@ -50,8 +50,6 @@ Creators who want to ship fast and pay nothing until they sell something. The fr
 
 My read: Lemon Squeezy is solving for the bootstrapped creator who needs the simplest possible path from "I built a thing" to "I sold a thing."
 
-Creators comparing this against a course-platform bundle should also see [Podia vs Teachable](/articles/podia-vs-teachable-2026-which-online-course-platform-is-right-for-you/), which folds a merchant-of-record-style fee into a broader toolset.
-
 ## Where does each platform fall short?
 
 Paddle flags a real limit in its own data: products priced under $10 get separate, bespoke pricing. For anyone selling low-ticket items, a $5 icon pack, a $7 prompt template, that's a conversation, not a checkout. Lemon Squeezy's 5% + 50¢ rate gets punishing at low price points too (on a $5 product, that's a 15% effective fee), but at least the math is public. Paddle's Enterprise tier exists for high-volume businesses and includes custom migration support, but pricing requires contacting sales, there's no anchor number to work from.

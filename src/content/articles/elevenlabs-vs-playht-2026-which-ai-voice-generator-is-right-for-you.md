@@ -52,7 +52,7 @@ That number matters because "unlimited" is doing a lot of marketing work that th
 
 ElevenLabs suits teams and power users who generate across multiple media types. Because credits are shared across every product, Text to Speech, Music, Sound Effects, Dubbing, Voice Isolator, and more, the platform works well when a single team member switches between projects rather than running one workload at volume.
 
-Podcasters weighing the recording side of this stack alongside the voice generation side should also see [Descript vs Riverside](/articles/descript-vs-riverside-which-tool-should-podcasters-and-video-creators/), which covers capture and editing costs.
+Podcasters weighing the recording side of this stack alongside the voice generation side should also see [Descript vs Riverside](/articles/descript-vs-riverside-which-tool-should-podcasters-and-video-creators-/), which covers capture and editing costs.
 
 The rollover policy is worth understanding before you commit. Unused credits roll over for up to two months, capping at twice your monthly quota, so your total balance can reach at most three times the monthly figure. Pay-as-you-go top-up credits sit outside that cap. It's a sensible system, but it punishes inconsistent usage patterns. If your project work is seasonal, you lose what doesn't roll within two months.
 

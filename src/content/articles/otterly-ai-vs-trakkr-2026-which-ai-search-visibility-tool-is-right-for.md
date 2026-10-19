@@ -51,8 +51,6 @@ Otterly AI's base plans — $29, $189, and $489/month — include ChatGPT, Googl
 
 For teams that need to monitor brand presence across the full range of frontier models, Trakkr's eight-engine baseline at $100/month is a structural advantage over Otterly's à la carte model expansion.
 
-There is a legal dimension to this monitoring too. A German court has already ruled that [Google is directly liable for false AI Overview content](/articles/google-must-own-its-ai-overview-errors-court-rules/) — which makes knowing what these systems say about your brand a risk question, not just a marketing one.
-
 ## Otterly AI: built for solo operators and budget-conscious teams
 
 Otterly AI is straightforward. Three tiers — $29, $189, and $489 per month — scaled by prompt volume: 15, 100, and 400 prompts respectively. No hidden fees, no requirement for a separate OpenAI subscription, and you can cancel anytime. Add-on packages extend AI engine coverage up to 1,000 prompts.

@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Author pages exist only for authors with published articles; don't link to a 404.
+const published = (await getCollection('articles')).filter((a) => a.data.draft !== true);
+const hasPage = new Set(published.map((a) => a.data.author.toLowerCase().trim().replace(/\s+/g, '-')));
 
 const authors = [
   {
@@ -75,9 +80,13 @@ const authors = [
               <div class="author-card">
                 <div class="author-av">{a.initials}</div>
                 <div>
-                  <a href={`/authors/${a.slug}/`} class="author-name-link">
+                  {hasPage.has(a.slug) ? (
+                    <a href={`/authors/${a.slug}/`} class="author-name-link">
+                      <div class="author-name">{a.name}</div>
+                    </a>
+                  ) : (
                     <div class="author-name">{a.name}</div>
-                  </a>
+                  )}
                   <div class="author-role">{a.focus}</div>
                 </div>
               </div>

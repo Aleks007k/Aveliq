@@ -7,3 +7,15 @@
 /category/business/  /articles/           301
 /category/crypto     /articles/           301
 /category/crypto/    /articles/           301
+
+# One shared byline (Task 3): old persona pages -> Aveliq Editorial
+/author/alex-reeve      /author/aveliq-editorial/  301
+/author/alex-reeve/     /author/aveliq-editorial/  301
+/author/sophia-chen     /author/aveliq-editorial/  301
+/author/sophia-chen/    /author/aveliq-editorial/  301
+/author/hanna-yovska    /author/aveliq-editorial/  301
+/author/hanna-yovska/   /author/aveliq-editorial/  301
+/author/marcus-hale     /author/aveliq-editorial/  301
+/author/marcus-hale/    /author/aveliq-editorial/  301
+/authors/*              /author/aveliq-editorial/  301
+/authors                /author/aveliq-editorial/  301

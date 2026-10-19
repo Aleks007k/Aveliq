@@ -4,7 +4,7 @@ seoTitle: "Fireflies vs tl;dv 2026: AI Meeting Notes Comparison"
 description: "Fireflies and tl;dv both transcribe your meetings. Which one's worth paying for? We compare pricing, free tiers, and AI features for 2026."
 category: "ai"
 type: "analysis"
-author: "Alex Reeve"
+author: "Aveliq Editorial"
 date: "2026-07-25"
 readTime: 4
 tags: ["ai tools", "productivity", "meeting notes", "saas", "comparison", "sales tools"]

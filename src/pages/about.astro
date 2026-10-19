@@ -1,41 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-
-// Author pages exist only for authors with published articles; don't link to a 404.
-const published = (await getCollection('articles')).filter((a) => a.data.draft !== true);
-const hasPage = new Set(published.map((a) => a.data.author.toLowerCase().trim().replace(/\s+/g, '-')));
-
-const authors = [
-  {
-    initials: 'AR',
-    name: 'Alex Reeve',
-    slug: 'alex-reeve',
-    focus: 'AI, business, and macro finance',
-    desc: "Lead editorial voice. Covers AI, business, and markets, and writes Aveliq's commercial comparisons and reviews. Cold and concrete from the first line, skeptical of hype, and always takes a position grounded in revenue and unit economics rather than press-release language."
-  },
-  {
-    initials: 'SC',
-    name: 'Sophia Chen',
-    slug: 'sophia-chen',
-    focus: 'Crypto and fintech',
-    desc: "Covers cryptocurrencies, tokens, exchanges, DeFi, stablecoins, and fintech rails. Reads price action and on-chain data closely and writes for readers who already understand the market — specific figures, clear stance, no filler."
-  },
-  {
-    initials: 'MH',
-    name: 'Marcus Hale',
-    slug: 'marcus-hale',
-    focus: 'Deep AI',
-    desc: "Writes long-form deep dives into how AI works under the hood — models, research, and infrastructure. For readers who want the mechanics, not the surface."
-  },
-  {
-    initials: 'HY',
-    name: 'Hanna Yovska',
-    slug: 'hanna-yovska',
-    focus: 'Finance',
-    desc: "Covers personal, institutional, and macro finance with a human angle — what the numbers actually mean for an ordinary person or investor."
-  }
-];
+import { EDITORIAL, EDITORIAL_PATH } from '../data/editorial';
 ---
 
 <BaseLayout title="About" description="Software comparisons for freelancers and small teams. What small-team software really costs.">
@@ -68,31 +33,25 @@ const authors = [
         <div class="about-block-label">How We Work</div>
         <div class="about-block-content">
           <p>Aveliq is AI-assisted. We use AI tools to help research, draft, and structure our articles. Every piece is reviewed by a human before publication — figures are checked against primary sources, and nothing is published on autopilot.</p>
-          <p>Our authors are editorial voices, each with a defined focus and a consistent point of view. They are not presented as real individuals, and we do not invent personal histories or credentials for them.</p>
+          <p>Every article runs under one shared byline, Aveliq Editorial. It is not a person, and we do not invent personal histories or credentials.</p>
         </div>
       </div>
 
       <div class="about-block">
-        <div class="about-block-label">Authors</div>
+        <div class="about-block-label">Byline</div>
         <div class="about-block-content">
-          {authors.map((a) => (
-            <div class="author-entry">
-              <div class="author-card">
-                <div class="author-av">{a.initials}</div>
-                <div>
-                  {hasPage.has(a.slug) ? (
-                    <a href={`/authors/${a.slug}/`} class="author-name-link">
-                      <div class="author-name">{a.name}</div>
-                    </a>
-                  ) : (
-                    <div class="author-name">{a.name}</div>
-                  )}
-                  <div class="author-role">{a.focus}</div>
-                </div>
+          <div class="author-entry">
+            <div class="author-card">
+              <div class="author-av">{EDITORIAL.initials}</div>
+              <div>
+                <a href={EDITORIAL_PATH} class="author-name-link">
+                  <div class="author-name">{EDITORIAL.name}</div>
+                </a>
+                <div class="author-role">{EDITORIAL.role}</div>
               </div>
-              <p class="author-desc">{a.desc}</p>
             </div>
-          ))}
+            <p class="author-desc">{EDITORIAL.desc}</p>
+          </div>
         </div>
       </div>
 

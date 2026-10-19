@@ -4,7 +4,7 @@ seoTitle: "Jasper vs Copy.ai 2026: Which AI Tool Is Worth Paying For?"
 description: "Jasper and Copy.ai serve completely different buyers. Here's how their pricing, features, and workflows compare — and which one fits your actual use case."
 category: "ai"
 type: "analysis"
-author: "Alex Reeve"
+author: "Aveliq Editorial"
 date: "2026-06-19"
 readTime: 5
 tags: ["ai tools", "jasper", "copy.ai", "content marketing", "ai comparison"]

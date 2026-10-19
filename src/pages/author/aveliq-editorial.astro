@@ -3,54 +3,31 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { catLabel as labelOf } from '../../data/categories';
 
-function slugify(name: string): string {
-  return name.toLowerCase().trim().replace(/\s+/g, '-');
-}
+import { EDITORIAL, EDITORIAL_PATH } from '../../data/editorial';
 
 const catLabel = new Proxy({} as Record<string, string>, { get: (_t, k) => labelOf(String(k)) });
-
 const siteUrl = 'https://aveliq.net';
-
-export async function getStaticPaths() {
-  const slug = (name: string) => name.toLowerCase().trim().replace(/\s+/g, '-');
-  const all = await getCollection('articles');
-  const names = [...new Set(all.map((a: CollectionEntry<'articles'>) => a.data.author))];
-  return names.map((name: string) => ({
-    params: { author: slug(name) },
-    props: { authorName: name },
-  }));
-}
-
-interface Props { authorName: string; }
-const { authorName } = Astro.props as Props;
+const authorName = EDITORIAL.name;
 
 const all = await getCollection('articles');
 const articles = all
-  .filter((a: CollectionEntry<'articles'>) => a.data.author === authorName && a.data.draft !== true)
+  .filter((a: CollectionEntry<'articles'>) => a.data.draft !== true)
   .sort((a: CollectionEntry<'articles'>, b: CollectionEntry<'articles'>) =>
     new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
   );
 
-const initials = authorName.split(' ').map((w: string) => w[0]).join('').toUpperCase();
+const initials = EDITORIAL.initials;
 const cats = [...new Set(articles.map((a: CollectionEntry<'articles'>) => a.data.category))];
-const catNames = cats.map((c: string) => catLabel[c] ?? c);
+const bio = EDITORIAL.desc;
+const authorUrl = `${siteUrl}${EDITORIAL_PATH}`;
 
-function joinNice(arr: string[]): string {
-  if (arr.length === 0) return 'AI, finance, and fintech';
-  if (arr.length === 1) return arr[0];
-  if (arr.length === 2) return `${arr[0]} and ${arr[1]}`;
-  return `${arr.slice(0, -1).join(', ')}, and ${arr[arr.length - 1]}`;
-}
-
-const bio = `${authorName} is an editorial voice at Aveliq, covering ${joinNice(catNames)}.`;
-const authorUrl = `${siteUrl}/authors/${slugify(authorName)}/`;
-
-const personSchema = {
+// The byline is not a person: describe it as the publishing Organization.
+const orgSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": authorName,
-  "worksFor": { "@type": "Organization", "name": "Aveliq" },
-  "url": authorUrl,
+  "@type": "Organization",
+  "name": "Aveliq",
+  "alternateName": EDITORIAL.name,
+  "url": siteUrl,
   "description": bio
 };
 ---
@@ -59,8 +36,7 @@ const personSchema = {
   title={authorName}
   description={bio}
   canonical={authorUrl}
-  schema={personSchema}
-  noindex={articles.length === 0}
+  schema={orgSchema}
 >
 
 <div class="author-page">
@@ -69,9 +45,9 @@ const personSchema = {
     <div class="author-hero-inner">
       <div class="author-big-av">{initials}</div>
       <div class="author-hero-text">
-        <div class="author-eyebrow">Author</div>
+        <div class="author-eyebrow">Byline</div>
         <h1 class="author-name-h1">{authorName}</h1>
-        <div class="author-title">Editorial voice · Aveliq</div>
+        <div class="author-title">{EDITORIAL.role}</div>
         <p class="author-bio">{bio}</p>
         <a class="author-about-link" href="/about/">About our editorial approach →</a>
         <div class="author-stats">

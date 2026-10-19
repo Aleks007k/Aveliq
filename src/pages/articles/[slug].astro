@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import Disclaimer from '../../components/Disclaimer.astro';
+import { EDITORIAL, EDITORIAL_PATH } from '../../data/editorial';
 import { catLabel as labelOf, catHref } from '../../data/categories';
 
 export async function getStaticPaths() {
@@ -18,7 +19,6 @@ interface Props {
 
 const { article } = Astro.props as Props;
 const { title, description, category, type, author, date, readTime, tags, draft } = article.data;
-const authorSlug = author.toLowerCase().trim().replace(/\s+/g, '-');
 const typeLabel: Record<string, string> = {
   analysis: 'Analysis',
   news: 'News',
@@ -63,9 +63,9 @@ const schema = {
   "datePublished": publishedISO,
   "dateModified": updatedISO,
   "author": {
-    "@type": "Person",
-    "name": author,
-    "url": `${siteUrl}/authors/${authorSlug}/`
+    "@type": "Organization",
+    "name": "Aveliq",
+    "url": siteUrl
   },
   "publisher": {
     "@type": "Organization",
@@ -130,11 +130,11 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
       <div class="art-byline">
         <div class="art-byline-left">
           <div class="art-av">
-            {author.split(' ').map((w: string) => w[0]).join('')}
+            {EDITORIAL.initials}
           </div>
-          <a href={`/authors/${authorSlug}/`} class="art-author-link">
-            <div class="art-author-name">{author}</div>
-            <div class="art-author-role">Editorial voice, Aveliq</div>
+          <a href={EDITORIAL_PATH} class="art-author-link">
+            <div class="art-author-name">{EDITORIAL.name}</div>
+            <div class="art-author-role">{EDITORIAL.role}</div>
         </div>
         <div class="art-byline-right">
           <span class="art-meta-item">{dateFormatted}</span>

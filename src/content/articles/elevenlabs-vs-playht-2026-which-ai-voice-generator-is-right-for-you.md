@@ -4,7 +4,7 @@ seoTitle: "ElevenLabs vs PlayHT 2026: AI Voice Generator Compared"
 description: "ElevenLabs and PlayHT both generate AI voices, but their pricing models, credit systems, and clone quality suit very different buyers. Here's how to choose."
 category: "ai"
 type: "analysis"
-author: "Alex Reeve"
+author: "Aveliq Editorial"
 date: "2026-08-15"
 readTime: 6
 tags: ["ai voice", "text to speech", "elevenlabs", "playht", "voice cloning", "ai tools"]

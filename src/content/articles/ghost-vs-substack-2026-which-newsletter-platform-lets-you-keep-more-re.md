@@ -4,7 +4,7 @@ seoTitle: "Ghost vs Substack 2026: Pricing, Fees & Revenue Comparison"
 description: "Ghost charges a flat yearly fee; Substack takes 10% of every subscription. Here's which model costs creators less as their audience grows."
 category: "email-marketing"
 type: "analysis"
-author: "Sophia Chen"
+author: "Aveliq Editorial"
 date: "2026-10-08"
 readTime: 5
 tags: ["ghost", "substack", "newsletter platforms", "creator economy", "comparison"]

@@ -4,7 +4,7 @@ seoTitle: "Tally vs Fillout (2026): Form Builder Comparison & Pricing"
 description: "Tally offers unlimited free submissions; Fillout caps free users at 1,000/month. Here's which form builder fits your team's needs and budget in 2026."
 category: "scheduling-forms"
 type: "analysis"
-author: "Hanna Yovska"
+author: "Aveliq Editorial"
 date: "2026-09-28"
 readTime: 5
 tags: ["form builders", "saas tools", "productivity", "software comparison", "fintech tools"]

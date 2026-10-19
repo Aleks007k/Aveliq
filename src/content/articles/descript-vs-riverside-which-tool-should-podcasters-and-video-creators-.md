@@ -4,7 +4,7 @@ seoTitle: "Descript vs. Riverside 2026: Best Tool for Podcasters"
 description: "Descript edits video like a doc. Riverside records like a studio. Here's which one actually fits your workflow and budget in 2026."
 category: "ai"
 type: "analysis"
-author: "Alex Reeve"
+author: "Aveliq Editorial"
 date: "2026-07-27"
 readTime: 6
 tags: ["podcasting", "video production", "descript", "riverside", "creator tools", "comparison"]

@@ -4,7 +4,7 @@ seoTitle: "Kit vs MailerLite 2026: Best Email Platform Compared"
 description: "Kit and MailerLite both offer free plans, but they serve very different users. Here's which platform wins for creators, small teams, and growing lists."
 category: "email-marketing"
 type: "analysis"
-author: "Sophia Chen"
+author: "Aveliq Editorial"
 date: "2026-10-13"
 readTime: 6
 tags: ["email marketing", "kit", "mailerlite", "creator tools", "small business", "comparison"]

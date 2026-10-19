@@ -4,7 +4,7 @@ seoTitle: "Lemlist vs Instantly 2026: Best Cold Email Tool for Small Teams"
 description: "Lemlist charges per user and adds LinkedIn, calls and SMS. Instantly charges per plan and is built for email volume. Here's which fits a small team in 2026."
 category: "sales"
 type: "analysis"
-author: "Sophia Chen"
+author: "Aveliq Editorial"
 date: "2026-10-15"
 readTime: 5
 tags: ["cold email", "lemlist", "instantly", "email outreach", "sales tools", "small business"]

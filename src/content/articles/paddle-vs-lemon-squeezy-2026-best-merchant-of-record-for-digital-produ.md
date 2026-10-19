@@ -4,7 +4,7 @@ seoTitle: "Paddle vs. Lemon Squeezy 2026: Best Merchant of Record"
 description: "Paddle or Lemon Squeezy? Compare fees, tax compliance, and features to find the right merchant of record for your digital product business."
 category: "payments"
 type: "analysis"
-author: "Sophia Chen"
+author: "Aveliq Editorial"
 date: "2026-08-19"
 readTime: 5
 tags: ["paddle", "lemon squeezy", "merchant of record", "digital products", "saas tools", "fintech"]

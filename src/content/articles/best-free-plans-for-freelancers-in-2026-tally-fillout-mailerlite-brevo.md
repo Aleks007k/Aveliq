@@ -4,7 +4,7 @@ seoTitle: "Best Free Plans for Freelancers 2026: Forms, Email & More"
 description: "Compare the most generous free tiers from Tally, Fillout, MailerLite, Brevo, and Beehiiv for freelancers who need forms, email, and newsletters without paying upfront."
 category: "email-marketing"
 type: "analysis"
-author: "Sophia Chen"
+author: "Aveliq Editorial"
 date: "2026-10-03"
 readTime: 7
 tags: ["freelance tools", "free plans", "email marketing", "forms", "newsletter", "comparison"]

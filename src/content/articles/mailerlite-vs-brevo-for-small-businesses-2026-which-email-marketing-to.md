@@ -4,7 +4,7 @@ seoTitle: "MailerLite vs Brevo for Small Businesses (2026) Compared"
 description: "MailerLite or Brevo for your small business? We compare pricing, free tiers, features, and who each platform actually suits in 2026."
 category: "email-marketing"
 type: "analysis"
-author: "Alex Reeve"
+author: "Aveliq Editorial"
 date: "2026-07-09"
 readTime: 4
 tags: ["email marketing", "mailerlite", "brevo", "small business", "marketing tools", "comparison"]

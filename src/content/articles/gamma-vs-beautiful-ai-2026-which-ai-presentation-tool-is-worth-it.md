@@ -4,7 +4,7 @@ seoTitle: "'Gamma vs Beautiful.ai 2026: AI Presentation Tool Comparison'"
 description: "'Gamma uses a credit-based AI model; Beautiful.ai runs on Smart Slide automation. Here's which one fits your workflow and budget in 2026.'"
 category: "ai"
 type: "analysis"
-author: "Hanna Yovska"
+author: "Aveliq Editorial"
 date: "2026-09-29"
 readTime: 7
 tags: ["ai tools", "presentations", "productivity", "saas", "software comparison"]

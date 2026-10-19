@@ -125,6 +125,7 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
       </div>
 
       <h1 class="art-h1">{title}</h1>
+      <p class="art-aff-note">Some links in this article are affiliate links, marked with *. We may earn a commission at no extra cost to you. <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
       <p class="art-lead">{description}</p>
 
       <div class="art-byline">
@@ -148,7 +149,6 @@ const Content = (await import(`../../content/articles/${article.id}.md`)).defaul
 
   <div class="art-layout">
     <div class="art-body">
-      {affiliate && <Disclaimer type="affiliate" />}
       {(category === 'finance' || category === 'crypto') && <Disclaimer type="financial" />}
       <div class="prose">
         <Content />

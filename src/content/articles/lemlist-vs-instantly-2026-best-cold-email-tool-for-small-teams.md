@@ -79,5 +79,3 @@ Start with Lemlist's 14-day trial if multichannel matters to you. If it doesn't,
 ---
 
 **Methodology.** Pricing and feature data was taken from the official pages of Lemlist and Instantly, collected on 2026-10-15. We did not test the products' APIs for this article. Prices change often — confirm on the provider's site before buying.
-
-*This article may contain affiliate links. They do not affect the prices you pay or our assessment.*

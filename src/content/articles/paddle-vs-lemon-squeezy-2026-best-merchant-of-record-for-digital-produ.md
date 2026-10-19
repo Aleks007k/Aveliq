@@ -67,5 +67,3 @@ The practical step before committing to either: get a quote from Paddle for your
 ---
 
 **Methodology.** Pricing and feature data was taken from the official pages of Paddle, Lemon Squeezy, collected on 2026-08-19. We did not test the products' APIs for this article. Figures come directly from those sources; where a value was unavailable it is marked "—". Prices change often — confirm on the provider's site before buying.
-
-*This article may contain affiliate links. They do not affect the prices you pay or our assessment.*

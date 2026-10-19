@@ -78,5 +78,3 @@ For most solo freelancers, Bonsai Essentials is the better buy.
 ---
 
 **Methodology.** Pricing and feature data was taken from the official pages of Bonsai and HoneyBook, collected on 2026-10-18. Which features sit on which plan was cross-checked against independent pricing reviews. We did not test the products ourselves for this article. Prices change often — confirm on the provider's site before buying.
-
-*This article may contain affiliate links. They do not affect the prices you pay or our assessment.*

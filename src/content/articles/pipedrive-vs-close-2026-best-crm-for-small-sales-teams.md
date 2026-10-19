@@ -75,5 +75,3 @@ One practical step before signing either contract: run Close's free trial specif
 ---
 
 **Methodology.** Pricing and feature data was taken from the official pages of Pipedrive, Close, collected on 2026-07-20. We did not test the products' APIs for this article. Figures come directly from those sources; where a value was unavailable it is marked “—”. Prices change often — confirm on the provider's site before buying.
-
-*This article may contain affiliate links. They do not affect the prices you pay or our assessment.*

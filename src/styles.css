@@ -1019,6 +1019,19 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px;
 }
 
+/* AFFILIATE NOTE (under the article title) */
+.art-aff-note {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  line-height: 1.6;
+  color: rgba(245,240,232,.5);
+  margin: -6px 0 18px;
+}
+.art-aff-note a {
+  color: var(--amber);
+  border-bottom: 1px solid rgba(212,168,83,.3);
+}
+
 /* AFFILIATE LINK */
 .prose a.aff-btn,
 a.aff-btn {

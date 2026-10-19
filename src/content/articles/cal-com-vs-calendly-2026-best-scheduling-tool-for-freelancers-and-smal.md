@@ -88,5 +88,3 @@ Solo freelancers should start on Cal.com's free plan. Teams that value a polishe
 ---
 
 **Methodology.** Pricing and feature data was taken from the official pages of Cal.com and Calendly, collected on 2026-10-05. We did not test the products' APIs for this article. Figures come directly from those sources; where a value was unavailable it is marked "—". Prices change often — confirm on the provider's site before buying.
-
-*This article may contain affiliate links. They do not affect the prices you pay or our assessment.*

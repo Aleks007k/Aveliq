@@ -72,5 +72,3 @@ One thing neither platform makes easy to see upfront: the true all-in effective 
 ---
 
 **Methodology.** Pricing and feature data was taken from the official pages of Square, PayPal, collected on 2026-07-16. We did not test the products' APIs for this article. Figures come directly from those sources; where a value was unavailable it is marked “—”. Prices change often — confirm on the provider's site before buying.
-
-*This article may contain affiliate links. They do not affect the prices you pay or our assessment.*

@@ -81,5 +81,3 @@ Start on Substack while your paid revenue is under about $290 a month. Once it p
 ---
 
 **Methodology.** Pricing and feature data was taken from the official pages of Ghost and Substack, collected on 2026-10-08. We did not test the products' APIs for this article. Figures come directly from those sources; where a value was unavailable it is marked "—". Prices change often — confirm on the provider's site before buying.
-
-*This article may contain affiliate links. They do not affect the prices you pay or our assessment.*

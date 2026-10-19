@@ -3,55 +3,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { EDITORIAL, EDITORIAL_PATH } from '../data/editorial';
 ---
 
-<BaseLayout title="About" description="Software comparisons for freelancers and small teams. What small-team software really costs.">
+<BaseLayout title="About" description="Aveliq compares software for freelancers and small teams: invoicing and payments, email and marketing, scheduling and forms, sales tools, and AI tools for everyday work.">
   <section class="about">
 
     <div class="about-hero">
       <div class="about-eyebrow">About</div>
-      <h1 class="about-h1">What small-team<br>software really costs.</h1>
+      <h1 class="about-h1">About Aveliq</h1>
     </div>
 
     <div class="about-body">
 
       <div class="about-block">
-        <div class="about-block-label">Mission</div>
+        <div class="about-block-label">What we do</div>
         <div class="about-block-content">
-          <p>Aveliq covers artificial intelligence, technology, markets, and the ideas shaping the future. Our mission is to filter noise, identify important signals, and deliver clear analysis for curious readers.</p>
-          <p>We write for investors, operators, and technologists who need context, not headlines.</p>
+          <p>Aveliq compares software for freelancers and small teams: invoicing and payments, email and marketing, scheduling and forms, sales tools, and AI tools for everyday work.</p>
+          <p>We focus on the question most comparison pages skip: what a tool will actually cost you. Every comparison shows the price at a realistic team size, where the free plan stops, and which plan you need for the job — not just the starting price.</p>
         </div>
       </div>
 
       <div class="about-block">
-        <div class="about-block-label">Editorial Standards</div>
+        <div class="about-block-label">How we work</div>
         <div class="about-block-content">
-          <p>We prioritize accuracy, transparency, and context. Every story is reviewed for clarity and factual consistency. We separate reporting from opinion and update articles when new information becomes available.</p>
-          <p>We do not accept payment for editorial coverage. Sponsored content is always clearly labelled.</p>
+          <p>Prices and plan limits come from each vendor's own pricing page, and every article shows the date we checked. Where a pricing page is unclear, we cross-check against independent pricing reviews and say so. We have not tested a product hands-on unless the article says we did. Prices change: if you spot an outdated number, email us and we'll fix it and update the date.</p>
         </div>
       </div>
 
       <div class="about-block">
-        <div class="about-block-label">How We Work</div>
+        <div class="about-block-label">How AI is used</div>
         <div class="about-block-content">
-          <p>Aveliq is AI-assisted. We use AI tools to help research, draft, and structure our articles. Every piece is reviewed by a human before publication — figures are checked against primary sources, and nothing is published on autopilot.</p>
-          <p>Every article runs under one shared byline, Aveliq Editorial. It is not a person, and we do not invent personal histories or credentials.</p>
+          <p>Aveliq is a small, AI-assisted publication. AI tools help us gather pricing data, draft articles and check them for errors. Articles are published under <a href={EDITORIAL_PATH}>"{EDITORIAL.name}"</a>, a shared editorial byline — not a real person. Every article is approved for publication by the site's owner.</p>
         </div>
       </div>
 
       <div class="about-block">
-        <div class="about-block-label">Byline</div>
+        <div class="about-block-label">How we make money</div>
         <div class="about-block-content">
-          <div class="author-entry">
-            <div class="author-card">
-              <div class="author-av">{EDITORIAL.initials}</div>
-              <div>
-                <a href={EDITORIAL_PATH} class="author-name-link">
-                  <div class="author-name">{EDITORIAL.name}</div>
-                </a>
-                <div class="author-role">{EDITORIAL.role}</div>
-              </div>
-            </div>
-            <p class="author-desc">{EDITORIAL.desc}</p>
-          </div>
+          <p>Some links on Aveliq are affiliate links, marked with *. If you buy through one, we may earn a commission at no extra cost to you. It doesn't change our verdicts: we compare tools whether or not they have an affiliate program, and we say so when a cheaper or free option is the better choice.</p>
+        </div>
+      </div>
+
+      <div class="about-block">
+        <div class="about-block-label">Contact</div>
+        <div class="about-block-content">
+          <p><a href="mailto:editorial@aveliq.net">editorial@aveliq.net</a> · <a href="/privacy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate disclosure</a></p>
         </div>
       </div>
 
@@ -108,6 +102,8 @@ import { EDITORIAL, EDITORIAL_PATH } from '../data/editorial';
   margin-bottom: 16px;
 }
 .about-block-content p:last-child { margin-bottom: 0; }
+.about-block-content a { color: var(--amber); border-bottom: 1px solid rgba(212,168,83,.3); }
+.about-block-content a:hover { border-color: var(--amber); }
 
 .author-entry { margin-top: 28px; }
 .author-entry:first-child { margin-top: 0; }

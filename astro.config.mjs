@@ -16,6 +16,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
+        !page.includes('/impressum/') &&
         !draftSlugs.some((slug) => page.includes(`/articles/${slug}/`)),
     }),
   ],

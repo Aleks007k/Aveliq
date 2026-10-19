@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Angaben gemäß § 5 DDG und § 18 Abs. 2 MStV.
+// Fill in each value once here; it is used in both the German and the English version.
+const I = {
+  name:        '[ЗАПОЛНИТЬ]',   // Vor- und Nachname (bei Gewerbe ggf. + Firmenname)
+  street:      '[ЗАПОЛНИТЬ]',   // Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach)
+  city:        '[ЗАПОЛНИТЬ]',   // PLZ und Ort
+  country:     'Deutschland',
+  countryEn:   'Germany',
+  email:       '[ЗАПОЛНИТЬ]',   // z. B. editorial@aveliq.net
+  phone:       '[ЗАПОЛНИТЬ]',   // Telefonnummer (die Website hat kein Kontaktformular)
+  responsible: '[ЗАПОЛНИТЬ]',   // Verantwortlich nach § 18 Abs. 2 MStV: Name (Anschrift wie oben)
+};
+const isEmail = I.email.includes('@');
+---
+
+<BaseLayout title="Impressum" description="Impressum / Legal notice for Aveliq (aveliq.net) according to § 5 DDG and § 18 (2) MStV." noindex>
+  <section class="simple-page">
+    <div class="simple-hero">
+      <div class="simple-eyebrow">Legal</div>
+      <h1 class="simple-h1">Impressum.</h1>
+    </div>
+    <div class="simple-body">
+
+      <div class="policy-block" lang="de">
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <p>{I.name}<br />{I.street}<br />{I.city}<br />{I.country}</p>
+      </div>
+
+      <div class="policy-block" lang="de">
+        <h2>Kontakt</h2>
+        <p>
+          E-Mail: {isEmail ? <a href={`mailto:${I.email}`}>{I.email}</a> : I.email}<br />
+          Telefon: {I.phone}
+        </p>
+      </div>
+
+      <div class="policy-block" lang="de">
+        <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+        <p>{I.responsible}<br />{I.street}<br />{I.city}<br />{I.country}</p>
+      </div>
+
+      <div class="policy-block" lang="en">
+        <h2>Legal notice (English)</h2>
+        <p>Information according to § 5 of the German Digital Services Act (DDG):</p>
+        <p>{I.name}<br />{I.street}<br />{I.city}<br />{I.countryEn}</p>
+      </div>
+
+      <div class="policy-block" lang="en">
+        <h2>Contact</h2>
+        <p>
+          Email: {isEmail ? <a href={`mailto:${I.email}`}>{I.email}</a> : I.email}<br />
+          Phone: {I.phone}
+        </p>
+      </div>
+
+      <div class="policy-block" lang="en">
+        <h2>Responsible for content under § 18 (2) MStV</h2>
+        <p>{I.responsible}<br />{I.street}<br />{I.city}<br />{I.countryEn}</p>
+        <p style="margin-top:16px;font-size:12px;opacity:.4">Stand / Last updated: October 2026</p>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

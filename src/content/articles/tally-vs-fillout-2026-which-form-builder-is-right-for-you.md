@@ -60,7 +60,7 @@ Fillout's gap is cost escalation. A team hitting 5,000 responses a month on the 
 
 ## Who Should Use Each Tool
 
-**Tally** suits solo operators, small teams, and anyone who needs a generous feature set without a monthly bill. The free plan covering payments, file uploads, and conditional logic is unusual. Freelancers running client intake forms or researchers collecting open-ended survey data have little reason to look elsewhere at zero cost. The Pro tier makes sense when branding or analytics become a priority.
+**Tally** suits solo founders, small teams, and anyone who needs a generous feature set without a monthly bill. The free plan covering payments, file uploads, and conditional logic is unusual. Freelancers running client intake forms or researchers collecting open-ended survey data have little reason to look elsewhere at zero cost. The Pro tier makes sense when branding or analytics become a priority.
 
 **Fillout** fits teams that can forecast their monthly response volume and need a clear path to unlimited responses with a fixed number on the invoice. Unlimited seats on all plans is a genuine differentiator for larger teams where per-seat pricing would otherwise inflate the bill. The progression from $19/month to $89/month (monthly billing) maps cleanly to usage growth, which makes budgeting more predictable even if it is less generous.
 

@@ -46,7 +46,7 @@ This is where Fathom has a structural advantage. It offers forever data retentio
 
 ## Plausible: What It's Good For
 
-Plausible suits solo operators and small teams who want a clean, GDPR-compliant dashboard without the overhead of Google Analytics. The 30-day trial at Business-tier access is genuinely useful: you get to test funnels, user journeys, revenue tracking, and the Stats API before deciding whether you need them. If you don't, the Starter plan at $9/month covers a single site adequately.
+Plausible suits solo founders and small teams who want a clean, GDPR-compliant dashboard without the overhead of Google Analytics. The 30-day trial at Business-tier access is genuinely useful: you get to test funnels, user journeys, revenue tracking, and the Stats API before deciding whether you need them. If you don't, the Starter plan at $9/month covers a single site adequately.
 
 The Business plan adds Looker Studio integration, custom properties, and 5-year retention — features that matter once your reporting gets serious. There's also a 15% discount on Business annual billing for nonprofits, educational institutions, and open-source projects. On the numbers, Plausible rewards commitment to higher tiers, but makes it hard to forecast cost across those tiers without running their pageview calculator yourself.
 

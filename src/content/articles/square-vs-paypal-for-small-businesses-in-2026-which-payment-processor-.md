@@ -35,7 +35,7 @@ Square has one. The Square Free plan costs $0 per month per location, and you on
 
 ## What does Square actually cost?
 
-Square runs three published tiers plus a custom enterprise track. The Free plan is $0 per month per location. Plus is $49 per month per location, and Premium is $149 per month per location. If you process over $250,000 per year, Square will quote you custom pricing under Square Pro rather than listing a public rate. The loyalty rewards program and advanced features only arrive at Plus and above — the quiet detail is that the free tier is genuinely useful for solo operators but starts to feel thin once you want retention tools.
+Square runs three published tiers plus a custom enterprise track. The Free plan is $0 per month per location. Plus is $49 per month per location, and Premium is $149 per month per location. If you process over $250,000 per year, Square will quote you custom pricing under Square Pro rather than listing a public rate. The loyalty rewards program and advanced features only arrive at Plus and above — the quiet detail is that the free tier is genuinely useful for solo founders but starts to feel thin once you want retention tools.
 
 Email and text marketing is included, though texts move to 3¢ each after the first 500. Square also includes banking — checking, savings, and loans — which matters for businesses that want to consolidate financial infrastructure in one place.
 

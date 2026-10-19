@@ -37,7 +37,7 @@ Cal.com's free tier costs nothing and imposes no limit on event types or calenda
 
 Once you leave free, Cal.com's Teams plan is $12/user/month billed annually or $15/user/month billed monthly. Calendly's Teams plan is $16/seat/month billed annually or $20/seat/month billed monthly. Cal.com is cheaper on both billing options: $4 less per seat per month on annual, $5 less on monthly.
 
-If you're comparing Calendly's Standard plan ($10/seat/month annual, $12/seat/month monthly) against Cal.com Teams, Calendly wins at the single-seat tier — but Standard doesn't include round-robin scheduling, which most small teams need. Once you account for that, Cal.com pulls ahead on price. For a broader look at tools built for solo operators, see our [roundup of the best free plans for freelancers in 2026](/articles/best-free-plans-for-freelancers-in-2026-tally-fillout-mailerlite-brevo/).
+If you're comparing Calendly's Standard plan ($10/seat/month annual, $12/seat/month monthly) against Cal.com Teams, Calendly wins at the single-seat tier — but Standard doesn't include round-robin scheduling, which most small teams need. Once you account for that, Cal.com pulls ahead on price. For a broader look at tools built for solo founders, see our [roundup of the best free plans for freelancers in 2026](/articles/best-free-plans-for-freelancers-in-2026-tally-fillout-mailerlite-brevo/).
 
 ## A Genuinely Generous Free Tier
 

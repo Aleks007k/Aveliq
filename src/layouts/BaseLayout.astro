@@ -1,6 +1,5 @@
 ---
 import '../styles.css';
-import TickerBar from '../components/TickerBar.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import { CATEGORIES } from '../data/categories';
 const { title, description, ogImage, ogType, canonical, schema, breadcrumbSchema, noindex } = Astro.props;
@@ -85,9 +84,6 @@ const finalCanonical = canonical ?? Astro.url.href;
     });
   })();
 </script>
-
-<!-- TICKER -->
-<TickerBar />
 
 <!-- СТРАНИЦА -->
 <slot />

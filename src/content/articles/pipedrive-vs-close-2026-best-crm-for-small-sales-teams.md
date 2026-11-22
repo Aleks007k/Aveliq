@@ -1,18 +1,20 @@
 ---
 title: "Pipedrive vs Close (2026): Best CRM for Small Sales Teams"
 seoTitle: "Pipedrive vs Close (2026): Best CRM for Small Sales Teams"
-description: "Pipedrive's visual pipeline vs Close's built-in calling stack — we break down pricing, features, and which CRM wins for small sales teams in 2026."
+description: "Pipedrive's visual pipeline vs Close's built-in calling. Prices billed yearly and monthly, Pipedrive leads vs deals explained, and which CRM fits a small sales team."
 category: "sales"
 type: "analysis"
 author: "Aveliq Editorial"
 date: "2026-07-20"
-readTime: 5
+readTime: 6
 tags: ["crm", "sales tools", "pipedrive", "close", "small business", "comparison"]
 sources: ["https://www.pipedrive.com/en/pricing", "https://close.com/pricing"]
 draft: false
 ---
 
-A small sales team of three reps just wrapped their second month missing quota. The pipeline looks healthy on paper, but nobody called the leads sitting in the "contacted" stage for 12 days. The manager's question is concrete: do we need a better way to see the pipeline, or a better way to work the phones? That question is exactly what separates Pipedrive from Close in 2026.
+Pipedrive is built around the pipeline. Close is built around the phone.
+
+Say your three-rep team keeps missing quota. The pipeline looks healthy, but leads in the "contacted" stage sit untouched for 12 days. The question is concrete: do you need a better way to see the pipeline, or a better way to work the phones? That is exactly what separates Pipedrive from Close.
 
 <div class="cmp-scroll"><div class="cmp-wrap">
 <table class="cmp">
@@ -20,58 +22,68 @@ A small sales team of three reps just wrapped their second month missing quota. 
 <tr><th></th><th>Pipedrive</th><th>Close</th></tr>
 </thead>
 <tbody>
-<tr><th>Entry plan</th><td>Lite</td><td>Solo</td></tr>
-<tr><th>Price</th><td>€14</td><td>$19 per user / month</td></tr>
-<tr><th>Free tier</th><td class="no">—</td><td class="yes">✓</td></tr>
-<tr><th>Key limit</th><td class="no">—</td><td>Limited to 1 user, up to 10k leads</td></tr>
+<tr><th>Free plan</th><td class="no">No (free trial)</td><td class="no">No (free trial with calling and AI credits)</td></tr>
+<tr><th>Cheapest plan</th><td>Lite: €14/seat/month billed yearly</td><td>Solo: $9/user/month billed yearly, $19 monthly (1 user, up to 10,000 leads)</td></tr>
+<tr><th>Pricing unit</th><td>Per seat</td><td>Per user, plus calling usage</td></tr>
+<tr><th>Built around</th><td>Visual deal pipeline</td><td>Calling, email and SMS in one inbox</td></tr>
+<tr><th>What "lead" means</th><td>An unqualified prospect in the Leads Inbox, before it becomes a deal</td><td>A company record that holds contacts and opportunities</td></tr>
 </tbody>
 </table>
 </div></div>
 
-## What Each Tool Actually Does
+## What each tool actually does
 
-Pipedrive is a visual pipeline CRM. Its design logic starts with the deal, not the dial — you see every opportunity as a card moving through stages, and the platform layers AI-powered reporting, email sync, and automation on top of that view. Close is built around communication. Its standout feature is Chloe, an AI sales agent included on every plan that calls leads, qualifies prospects, books meetings, and updates CRM records automatically. For a team whose bottleneck is outreach volume rather than pipeline visibility, that is a meaningful difference in what the software does by default.
+Pipedrive is a visual pipeline CRM. It starts with the deal, not the dial: every opportunity is a card moving through stages, with reporting, email sync and automation layered on top. Close is built around communication. Its standout feature is Chloe, an AI sales agent included on every plan that calls leads, qualifies prospects, books meetings and updates records. If your bottleneck is outreach volume rather than pipeline visibility, that difference matters.
 
-## Which Plan Is Cheapest?
+## Pipedrive leads vs deals: what's the difference?
 
-Close's Solo plan, at $19 per user per month (or $9 per user per month billed annually), is the lowest entry price in this comparison. Pipedrive's Lite plan starts at €14 per month per seat. Both are entry-level tiers with material constraints: Solo is capped at 1 user and 10,000 leads; Pipedrive's Lite does not publish explicit seat or lead limits in the available data.
+Pipedrive separates prospects you haven't qualified yet from sales you're actively working.
 
-Neither tool offers a permanently free tier. Close provides a free trial that includes calling and AI credits, no credit card required, plus a 30-day money-back guarantee after purchase. Pipedrive does not list a free tier.
+- **A lead** is, in Pipedrive's words, "a potential sales opportunity linked to a contact or organization that has yet to be qualified." Leads live in the Leads Inbox, outside your pipeline. They have no pipeline stage, and you can't attach products, projects or documents to them or invoice them.
+- **A deal** is a "qualified sales opportunity" you're actively working on. Deals sit in your pipeline and move through stages until they're won or lost.
 
-## Is There a Free Tier?
+You convert a lead with "Convert to deal" in its detail view, or "Convert to deals" for several at once in the list view. The person, organization, notes and activities move to the new deal, and the lead is replaced by it.
 
-Close does not have a free plan, but its free trial includes calling and AI credits — which matters because it lets a team stress-test the core feature (the phone stack) before spending anything. Pipedrive also does not offer a free tier. If your shortlist depends on a free forever option, neither tool qualifies.
+When should you convert? Pipedrive's guidance: when you're confident the lead could result in a sale. A practical rule: convert when the prospect replies with interest, or when they reach whatever your first pipeline stage means — for example "First email sent."
 
-## Pipedrive: Pipeline Clarity at a Predictable Per-Seat Price
+The point of the split is a clean pipeline. Cold prospects stay in the inbox, and your pipeline only shows deals someone is working.
 
-Pipedrive's pricing is straightforward: €14, €39, €59, or €79 per seat per month across four tiers (Lite, Growth, Premium, Ultimate), billed monthly. Annual billing brings those to €168, €468, €708, and €948 per seat per year respectively. There are no published credit limits or usage caps in the available data, which makes budgeting easier for teams that hate surprise overage charges.
+**Close uses the word differently.** In Close, a "lead" is a company by default. Each lead holds one or more contacts — the people at that company — and a sale is tracked as an "opportunity" on that lead. So Pipedrive's "deal" is closest to Close's "opportunity," and Close's "lead" is closer to Pipedrive's organization. Keep that in mind if you're migrating between the two.
 
-The feature set scales in a logical way. Lead, calendar, and pipeline management are present across tiers; AI-powered report creation, full email sync with tracking, automations, nurturing sequences, and lead generation and routing appear in the listed features, though the data does not specify exactly which tier unlocks each. Security controls with rules and alerts round out the higher tiers.
+## Which plan is cheapest?
 
-In practice, Pipedrive suits teams where the sales motion is complex enough to need careful stage management — longer cycles, multiple stakeholders, deals that require nurturing over weeks. The visual pipeline is the product. If you do not need that view, you are paying for something you will not use.
+Close Solo, at $9 per user a month billed yearly or $19 monthly, is the lowest price here. It's capped at 1 user and 10,000 leads. Pipedrive Lite costs €14 per seat a month billed yearly.
 
-## Close: A Phone Stack Baked Into the CRM
+Neither tool has a permanent free plan. Close offers a free trial that includes calling and AI credits, with no credit card required, plus a 30-day money-back guarantee after purchase. Pipedrive offers a free trial.
 
-Close's pricing runs from $19 to $149 per user per month (monthly billing), with annual rates dropping to $9, $35, $99, and $139 per user per month across Solo, Essentials, Growth, and Scale. The credit pool model is worth reading carefully: Essentials gives 1,000 credits per user, capped at 10,000 per month for the team; Growth gives 1,500 per user up to 15,000; Scale gives 2,000 per user up to 20,000.
+## Pipedrive: pipeline clarity at a predictable per-seat price
 
-The calling economics are usage-based and passed through at cost. Most outbound calls run around $0.02 per minute; phone numbers start at about $1 per month. The Call Assistant add-on costs $50 per month plus $0.02 per minute of usage. Power Dialer is available on Growth and above; Predictive Dialer is Scale-only. The math is simple: if your reps are making a high volume of short outbound calls, the per-minute cost stays low, and the dialer features justify the higher tier price.
+Pipedrive has four plans: Lite, Growth, Premium and Ultimate, at €14, €39, €59 and €79 per seat a month billed yearly. Monthly billing costs more; in US pricing it's $24, $49, $79 and $99 per seat. There are no published usage caps, which makes budgeting simple.
 
-The tell is Chloe. An AI agent that handles the top-of-funnel call workflow — qualifying, booking, updating records — on every plan, including $19 Solo, is an unusual inclusion at that price point. Whether it performs as advertised in production is something the data cannot confirm, but the feature's placement on every tier signals where Close's product bet sits.
+Pipeline, lead and calendar management are on every plan. Higher plans add email sync with tracking, automations, AI-assisted reporting, lead routing and security controls.
 
-## Which CRM Wins on Cost for a Growing Team?
+Pipedrive suits teams whose sales are complex enough to need careful stage management: longer cycles, several decision-makers, deals that need nurturing over weeks. The visual pipeline is the product. If you don't need that view, you're paying for something you won't use.
 
-This depends entirely on team size and call volume, and a straight price comparison requires caution here because the two products price in different currencies and carry different usage models. What the data shows: Close's annual rates are materially lower at entry level ($9/user/month on Solo), while Pipedrive's tiers are fixed and predictable with no credit mechanics to track. A team making heavy outbound calls on Close will pay seat cost plus per-minute charges; a team on Pipedrive pays the flat seat rate with no published usage overage.
+## Close: a phone stack built into the CRM
 
-Neither model is objectively cheaper without knowing how many seats and how many minutes your team actually uses. Anyone who tells you otherwise is doing math the data does not support.
+Close's plans run from $19 to $149 per user a month billed monthly. Billed yearly, Solo, Essentials, Growth and Scale cost $9, $35, $99 and $139 per user a month. Calling and AI run on a credit pool: Essentials gives 1,000 credits per user, capped at 10,000 a month for the team; Growth gives 1,500 per user up to 15,000; Scale gives 2,000 per user up to 20,000.
 
-## The Verdict
+Calls are billed by usage. Most outbound calls cost around $0.02 a minute, and phone numbers start at about $1 a month. The Call Assistant add-on costs $50 a month plus $0.02 per minute. Power Dialer comes with Growth and above; Predictive Dialer only with Scale.
 
-Two different tools for two different sales motions. Pick Pipedrive if your team manages a visual, multi-stage pipeline and spends more time nurturing deals than dialing leads — the structured stage view and email-sync features are well-suited to longer B2B cycles, and the flat per-seat pricing makes forecasting simple. Start at €14/seat/month and move up as you need automation depth.
+Chloe, the AI agent that qualifies, books and updates records, is included on every plan, even $19 Solo. Whether it performs well on your leads is something only a trial will show.
 
-Pick Close if outbound call volume is the constraint. The built-in dialer, Chloe AI on every plan, and usage-based call pricing mean the tool is designed around the act of calling rather than bolting it on. The $9/user/month annual rate on Solo makes it worth trialing for a solo founder or a one-rep team before committing. For a team of three or four reps doing high-velocity outbound, Growth at $99/user/month annually with the Power Dialer is the plan to evaluate.
+## Which CRM costs less for a growing team?
 
-One practical step before signing either contract: run Close's free trial specifically to test call quality and Chloe's actual qualification accuracy on your lead type. Feature claims in pricing pages are marketing; a week of real calls is evidence.
+It depends on headcount and call volume. Close is cheaper to start, at $9 per user a month billed yearly on Solo, but heavy calling adds per-minute costs on top of seats. Pipedrive charges a flat seat price with no usage charges. The two also price in different currencies, so compare in the currency you'll actually pay.
+
+## The verdict
+
+Pick Pipedrive if your team manages a multi-stage pipeline and spends more time nurturing deals than dialing. Use the Leads Inbox for cold prospects and convert them to deals once they reply. Start on Lite at €14 per seat a month billed yearly.
+
+Pick Close if outbound call volume is your constraint. Start with the free trial and test call quality and Chloe on your own leads. A solo founder can start on Solo at $9 a month billed yearly; a team of three or four doing heavy outbound should evaluate Growth at $99 per user a month billed yearly, which adds the Power Dialer.
+
+If your outreach starts with cold email rather than calls, see our [Lemlist vs Instantly comparison](/articles/lemlist-vs-instantly-2026-best-cold-email-tool-for-small-teams/). For booking the meetings that follow, see [Calendly vs SavvyCal](/articles/calendly-vs-savvycal-for-consultants-2026-which-scheduling-tool-is-wor/).
 
 ---
 
-**Methodology.** Pricing and feature data was taken from the official pages of Pipedrive, Close, collected on 2026-07-20. We did not test the products' APIs for this article. Figures come directly from those sources; where a value was unavailable it is marked “—”. Prices change often — confirm on the provider's site before buying.
+**Methodology.** Pricing and feature data was taken from the official pages of Pipedrive and Close, first collected on 2026-07-20 and checked again on 2026-11-22. Pipedrive's monthly prices were cross-checked against an independent pricing review dated November 2026. The leads-vs-deals section is based on Pipedrive's and Close's own help centers. We did not test the products ourselves. Prices change often — confirm on the provider's site before buying.

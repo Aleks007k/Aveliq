@@ -1,18 +1,17 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { I, IMPRESSUM_ON, IMPRESSUM_PLACEHOLDERS } from '../../data/impressum';
 
-// Angaben gemäß § 5 DDG und § 18 Abs. 2 MStV.
-// Fill in each value once here; it is used in both the German and the English version.
-const I = {
-  name:        '[ЗАПОЛНИТЬ]',   // Vor- und Nachname (bei Gewerbe ggf. + Firmenname)
-  street:      '[ЗАПОЛНИТЬ]',   // Straße und Hausnummer (ladungsfähige Anschrift, kein Postfach)
-  city:        '[ЗАПОЛНИТЬ]',   // PLZ und Ort
-  country:     'Deutschland',
-  countryEn:   'Germany',
-  email:       '[ЗАПОЛНИТЬ]',   // z. B. editorial@aveliq.net
-  phone:       '[ЗАПОЛНИТЬ]',   // Telefonnummer (die Website hat kein Kontaktformular)
-  responsible: '[ЗАПОЛНИТЬ]',   // Verantwortlich nach § 18 Abs. 2 MStV: Name (Anschrift wie oben)
-};
+// Built only when IMPRESSUM_ON is true in src/data/impressum.ts.
+export function getStaticPaths() {
+  if (!IMPRESSUM_ON) return [];
+  if (IMPRESSUM_PLACEHOLDERS.length) {
+    throw new Error('Impressum: fill in ' + IMPRESSUM_PLACEHOLDERS.join(', ') +
+      ' in src/data/impressum.ts (or set IMPRESSUM_ON back to false).');
+  }
+  return [{ params: { page: undefined } }];
+}
+
 const isEmail = I.email.includes('@');
 ---
 

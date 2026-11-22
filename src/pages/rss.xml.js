@@ -12,7 +12,7 @@ export async function GET(context) {
 
   return rss({
     title: 'Aveliq',
-    description: 'AI, technology, markets and future-focused reporting.',
+    description: 'Software comparisons for freelancers and small teams, with vendor prices checked and dated.',
     site: context.site,
     items: sortedArticles.map((article) => ({
       title: article.data.title,

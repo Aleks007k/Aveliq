@@ -20,5 +20,6 @@
 # /author/* was the byline URL for a few minutes on 2026-10-19
 /author/*                /authors/aveliq-editorial/  301
 
-# Podia vs Teachable moves to Skillonica: add the 301 here once the new URL exists,
-# then remove the article from src/content/articles.
+# Podia vs Teachable moved to Skillonica (2026-11-22); the article file is in archive/
+/articles/podia-vs-teachable-2026-which-online-course-platform-is-right-for-you/ https://skillonica.com/articles/podia-vs-teachable-which-one-actually-saves-you-money/ 301
+/articles/podia-vs-teachable-2026-which-online-course-platform-is-right-for-you https://skillonica.com/articles/podia-vs-teachable-which-one-actually-saves-you-money/ 301
